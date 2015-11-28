@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
+		DAAC89121C094F5E0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89111C094F5E0000729C /* AppDelegate.m */; };
+		DAAC89151C094F5E0000729C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89141C094F5E0000729C /* ViewController.m */; };
+		DAAC89181C094F5E0000729C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89161C094F5E0000729C /* Main.storyboard */; };
+		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
+		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
+		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
+		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAAC89241C094F5E0000729C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAC89021C094F5E0000729C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAC89091C094F5E0000729C;
+			remoteInfo = "My-Microblog";
+		};
+		DAAC892F1C094F5E0000729C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAC89021C094F5E0000729C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAC89091C094F5E0000729C;
+			remoteInfo = "My-Microblog";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAAC89101C094F5E0000729C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAAC89111C094F5E0000729C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAAC89131C094F5E0000729C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAAC89141C094F5E0000729C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAAC89171C094F5E0000729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAAC891C1C094F5E0000729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAAC891E1C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAC89231C094F5E0000729C /* My-MicroblogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My-MicroblogTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAC89271C094F5E0000729C /* My_MicroblogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My_MicroblogTests.m; sourceTree = "<group>"; };
+		DAAC89291C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAC892E1C094F5E0000729C /* My-MicroblogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My-MicroblogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My_MicroblogUITests.m; sourceTree = "<group>"; };
+		DAAC89341C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAAC89071C094F5E0000729C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC89201C094F5E0000729C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC892B1C094F5E0000729C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAAC89011C094F5E0000729C = {
+			isa = PBXGroup;
+			children = (
+				DAAC890C1C094F5E0000729C /* My-Microblog */,
+				DAAC89261C094F5E0000729C /* My-MicroblogTests */,
+				DAAC89311C094F5E0000729C /* My-MicroblogUITests */,
+				DAAC890B1C094F5E0000729C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAAC890B1C094F5E0000729C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC890A1C094F5E0000729C /* My-Microblog.app */,
+				DAAC89231C094F5E0000729C /* My-MicroblogTests.xctest */,
+				DAAC892E1C094F5E0000729C /* My-MicroblogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAAC890C1C094F5E0000729C /* My-Microblog */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89101C094F5E0000729C /* AppDelegate.h */,
+				DAAC89111C094F5E0000729C /* AppDelegate.m */,
+				DAAC89131C094F5E0000729C /* ViewController.h */,
+				DAAC89141C094F5E0000729C /* ViewController.m */,
+				DAAC89161C094F5E0000729C /* Main.storyboard */,
+				DAAC89191C094F5E0000729C /* Assets.xcassets */,
+				DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */,
+				DAAC891E1C094F5E0000729C /* Info.plist */,
+				DAAC890D1C094F5E0000729C /* Supporting Files */,
+			);
+			path = "My-Microblog";
+			sourceTree = "<group>";
+		};
+		DAAC890D1C094F5E0000729C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC890E1C094F5E0000729C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAAC89261C094F5E0000729C /* My-MicroblogTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89271C094F5E0000729C /* My_MicroblogTests.m */,
+				DAAC89291C094F5E0000729C /* Info.plist */,
+			);
+			path = "My-MicroblogTests";
+			sourceTree = "<group>";
+		};
+		DAAC89311C094F5E0000729C /* My-MicroblogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */,
+				DAAC89341C094F5E0000729C /* Info.plist */,
+			);
+			path = "My-MicroblogUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAAC89091C094F5E0000729C /* My-Microblog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAC89371C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-Microblog" */;
+			buildPhases = (
+				DAAC89061C094F5E0000729C /* Sources */,
+				DAAC89071C094F5E0000729C /* Frameworks */,
+				DAAC89081C094F5E0000729C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My-Microblog";
+			productName = "My-Microblog";
+			productReference = DAAC890A1C094F5E0000729C /* My-Microblog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAAC89221C094F5E0000729C /* My-MicroblogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAC893A1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogTests" */;
+			buildPhases = (
+				DAAC891F1C094F5E0000729C /* Sources */,
+				DAAC89201C094F5E0000729C /* Frameworks */,
+				DAAC89211C094F5E0000729C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAC89251C094F5E0000729C /* PBXTargetDependency */,
+			);
+			name = "My-MicroblogTests";
+			productName = "My-MicroblogTests";
+			productReference = DAAC89231C094F5E0000729C /* My-MicroblogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAAC892D1C094F5E0000729C /* My-MicroblogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAC893D1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogUITests" */;
+			buildPhases = (
+				DAAC892A1C094F5E0000729C /* Sources */,
+				DAAC892B1C094F5E0000729C /* Frameworks */,
+				DAAC892C1C094F5E0000729C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAC89301C094F5E0000729C /* PBXTargetDependency */,
+			);
+			name = "My-MicroblogUITests";
+			productName = "My-MicroblogUITests";
+			productReference = DAAC892E1C094F5E0000729C /* My-MicroblogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAAC89021C094F5E0000729C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "赵志丹";
+				TargetAttributes = {
+					DAAC89091C094F5E0000729C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = P578XG8VUN;
+					};
+					DAAC89221C094F5E0000729C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = P578XG8VUN;
+						TestTargetID = DAAC89091C094F5E0000729C;
+					};
+					DAAC892D1C094F5E0000729C = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = P578XG8VUN;
+						TestTargetID = DAAC89091C094F5E0000729C;
+					};
+				};
+			};
+			buildConfigurationList = DAAC89051C094F5E0000729C /* Build configuration list for PBXProject "My-Microblog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAAC89011C094F5E0000729C;
+			productRefGroup = DAAC890B1C094F5E0000729C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAAC89091C094F5E0000729C /* My-Microblog */,
+				DAAC89221C094F5E0000729C /* My-MicroblogTests */,
+				DAAC892D1C094F5E0000729C /* My-MicroblogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAAC89081C094F5E0000729C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */,
+				DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */,
+				DAAC89181C094F5E0000729C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC89211C094F5E0000729C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC892C1C094F5E0000729C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAAC89061C094F5E0000729C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAC89151C094F5E0000729C /* ViewController.m in Sources */,
+				DAAC89121C094F5E0000729C /* AppDelegate.m in Sources */,
+				DAAC890F1C094F5E0000729C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC891F1C094F5E0000729C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAC892A1C094F5E0000729C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAAC89251C094F5E0000729C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAC89091C094F5E0000729C /* My-Microblog */;
+			targetProxy = DAAC89241C094F5E0000729C /* PBXContainerItemProxy */;
+		};
+		DAAC89301C094F5E0000729C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAC89091C094F5E0000729C /* My-Microblog */;
+			targetProxy = DAAC892F1C094F5E0000729C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAAC89161C094F5E0000729C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAC89171C094F5E0000729C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAC891C1C094F5E0000729C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAAC89351C094F5E0000729C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAAC89361C094F5E0000729C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAAC89381C094F5E0000729C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "My-Microblog/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAAC89391C094F5E0000729C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "My-Microblog/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAAC893B1C094F5E0000729C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "My-MicroblogTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-MicroblogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My-Microblog.app/My-Microblog";
+			};
+			name = Debug;
+		};
+		DAAC893C1C094F5E0000729C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "My-MicroblogTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-MicroblogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My-Microblog.app/My-Microblog";
+			};
+			name = Release;
+		};
+		DAAC893E1C094F5E0000729C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "My-MicroblogUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-MicroblogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "My-Microblog";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DAAC893F1C094F5E0000729C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "My-MicroblogUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-MicroblogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "My-Microblog";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAAC89051C094F5E0000729C /* Build configuration list for PBXProject "My-Microblog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAC89351C094F5E0000729C /* Debug */,
+				DAAC89361C094F5E0000729C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAAC89371C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-Microblog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAC89381C094F5E0000729C /* Debug */,
+				DAAC89391C094F5E0000729C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAAC893A1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAC893B1C094F5E0000729C /* Debug */,
+				DAAC893C1C094F5E0000729C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAAC893D1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAC893E1C094F5E0000729C /* Debug */,
+				DAAC893F1C094F5E0000729C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAAC89021C094F5E0000729C /* Project object */;
+}
