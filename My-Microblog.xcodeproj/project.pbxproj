@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC389C679C8FC4750B8C394 /* libPods.a */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
-		DAAC89121C094F5E0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89111C094F5E0000729C /* AppDelegate.m */; };
-		DAAC89151C094F5E0000729C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89141C094F5E0000729C /* ViewController.m */; };
-		DAAC89181C094F5E0000729C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89161C094F5E0000729C /* Main.storyboard */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
 		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
+		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FC389C679C8FC4750B8C394 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		559A775C20C50223EEE9923A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DAAC89101C094F5E0000729C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DAAC89111C094F5E0000729C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DAAC89131C094F5E0000729C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DAAC89141C094F5E0000729C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DAAC89171C094F5E0000729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAC891C1C094F5E0000729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAC891E1C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +47,9 @@
 		DAAC892E1C094F5E0000729C /* My-MicroblogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My-MicroblogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My_MicroblogUITests.m; sourceTree = "<group>"; };
 		DAAC89341C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAC89741C09701C0000729C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAAC89751C09701C0000729C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5889FB2527E9F6291E8082ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				559A775C20C50223EEE9923A /* Pods.debug.xcconfig */,
+				EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9ED4CB0A221103786DE729E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FC389C679C8FC4750B8C394 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAAC89011C094F5E0000729C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				DAAC89261C094F5E0000729C /* My-MicroblogTests */,
 				DAAC89311C094F5E0000729C /* My-MicroblogUITests */,
 				DAAC890B1C094F5E0000729C /* Products */,
+				5889FB2527E9F6291E8082ED /* Pods */,
+				9ED4CB0A221103786DE729E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +120,7 @@
 		DAAC890C1C094F5E0000729C /* My-Microblog */ = {
 			isa = PBXGroup;
 			children = (
-				DAAC89101C094F5E0000729C /* AppDelegate.h */,
-				DAAC89111C094F5E0000729C /* AppDelegate.m */,
-				DAAC89131C094F5E0000729C /* ViewController.h */,
-				DAAC89141C094F5E0000729C /* ViewController.m */,
-				DAAC89161C094F5E0000729C /* Main.storyboard */,
-				DAAC89191C094F5E0000729C /* Assets.xcassets */,
-				DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */,
-				DAAC891E1C094F5E0000729C /* Info.plist */,
+				DAAC89651C09701C0000729C /* Classes */,
 				DAAC890D1C094F5E0000729C /* Supporting Files */,
 			);
 			path = "My-Microblog";
@@ -117,6 +129,9 @@
 		DAAC890D1C094F5E0000729C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAAC89191C094F5E0000729C /* Assets.xcassets */,
+				DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */,
+				DAAC891E1C094F5E0000729C /* Info.plist */,
 				DAAC890E1C094F5E0000729C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +155,263 @@
 			path = "My-MicroblogUITests";
 			sourceTree = "<group>";
 		};
+		DAAC89651C09701C0000729C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89661C09701C0000729C /* Discover(发现) */,
+				DAAC896B1C09701C0000729C /* Home(首页) */,
+				DAAC89701C09701C0000729C /* Main(主要) */,
+				DAAC89771C09701C0000729C /* MessageCenter(消息) */,
+				DAAC897C1C09701C0000729C /* Profile(我) */,
+				DAAC89811C09701C0000729C /* Temp(临时) */,
+				DAAC89861C09701C0000729C /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DAAC89661C09701C0000729C /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89671C09701C0000729C /* Controller */,
+				DAAC89681C09701C0000729C /* Model */,
+				DAAC89691C09701C0000729C /* Other */,
+				DAAC896A1C09701C0000729C /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		DAAC89671C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC89681C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC89691C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC896A1C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC896B1C09701C0000729C /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC896C1C09701C0000729C /* Controller */,
+				DAAC896D1C09701C0000729C /* Model */,
+				DAAC896E1C09701C0000729C /* Other */,
+				DAAC896F1C09701C0000729C /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		DAAC896C1C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC896D1C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC896E1C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC896F1C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC89701C09701C0000729C /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89711C09701C0000729C /* Controller */,
+				DAAC89721C09701C0000729C /* Model */,
+				DAAC89731C09701C0000729C /* Other */,
+				DAAC89761C09701C0000729C /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		DAAC89711C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC89721C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC89731C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89741C09701C0000729C /* AppDelegate.h */,
+				DAAC89751C09701C0000729C /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC89761C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC89771C09701C0000729C /* MessageCenter(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89781C09701C0000729C /* Controller */,
+				DAAC89791C09701C0000729C /* Model */,
+				DAAC897A1C09701C0000729C /* Other */,
+				DAAC897B1C09701C0000729C /* View */,
+			);
+			path = "MessageCenter(消息)";
+			sourceTree = "<group>";
+		};
+		DAAC89781C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC89791C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC897A1C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC897B1C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC897C1C09701C0000729C /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC897D1C09701C0000729C /* Controller */,
+				DAAC897E1C09701C0000729C /* Model */,
+				DAAC897F1C09701C0000729C /* Other */,
+				DAAC89801C09701C0000729C /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		DAAC897D1C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC897E1C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC897F1C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC89801C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC89811C09701C0000729C /* Temp(临时) */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC89821C09701C0000729C /* Controller */,
+				DAAC89831C09701C0000729C /* Model */,
+				DAAC89841C09701C0000729C /* Other */,
+				DAAC89851C09701C0000729C /* View */,
+			);
+			path = "Temp(临时)";
+			sourceTree = "<group>";
+		};
+		DAAC89821C09701C0000729C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAAC89831C09701C0000729C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAC89841C09701C0000729C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DAAC89851C09701C0000729C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAC89861C09701C0000729C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +419,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAAC89371C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-Microblog" */;
 			buildPhases = (
+				832DA570BBEDF3E418B2BB29 /* Check Pods Manifest.lock */,
 				DAAC89061C094F5E0000729C /* Sources */,
 				DAAC89071C094F5E0000729C /* Frameworks */,
 				DAAC89081C094F5E0000729C /* Resources */,
+				97711700188140755C0C43FE /* Embed Pods Frameworks */,
+				464B7A511CFC22194CBD900D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +477,7 @@
 		DAAC89021C094F5E0000729C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MMB;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "赵志丹";
 				TargetAttributes = {
@@ -248,7 +524,6 @@
 			files = (
 				DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */,
 				DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */,
-				DAAC89181C094F5E0000729C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,13 +543,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		464B7A511CFC22194CBD900D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832DA570BBEDF3E418B2BB29 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97711700188140755C0C43FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DAAC89061C094F5E0000729C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAC89151C094F5E0000729C /* ViewController.m in Sources */,
-				DAAC89121C094F5E0000729C /* AppDelegate.m in Sources */,
+				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,14 +633,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DAAC89161C094F5E0000729C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAAC89171C094F5E0000729C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,8 +724,10 @@
 		};
 		DAAC89381C094F5E0000729C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 559A775C20C50223EEE9923A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";
@@ -421,8 +737,10 @@
 		};
 		DAAC89391C094F5E0000729C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";
@@ -497,6 +815,7 @@
 				DAAC89391C094F5E0000729C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAC893A1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +824,7 @@
 				DAAC893C1C094F5E0000729C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAC893D1C094F5E0000729C /* Build configuration list for PBXNativeTarget "My-MicroblogUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +833,7 @@
 				DAAC893F1C094F5E0000729C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
