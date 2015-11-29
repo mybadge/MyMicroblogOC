@@ -14,6 +14,14 @@
 		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
 		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4311C0AA589003295DB /* MMBTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4341C0AA5D6003295DB /* MMBDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,23 @@
 		DAAC89341C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAAC89741C09701C0000729C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAAC89751C09701C0000729C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAEAB4161C0A9649003295DB /* MMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNavigationController.h; sourceTree = "<group>"; };
+		DAEAB4171C0A9649003295DB /* MMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNavigationController.m; sourceTree = "<group>"; };
+		DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		DAEAB42C1C0AA133003295DB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		DAEAB42D1C0AA133003295DB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		DAEAB42F1C0AA24A003295DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DAEAB4301C0AA589003295DB /* MMBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTabBarController.h; sourceTree = "<group>"; };
+		DAEAB4311C0AA589003295DB /* MMBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTabBarController.m; sourceTree = "<group>"; };
+		DAEAB4331C0AA5D6003295DB /* MMBDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBDiscoverViewController.h; sourceTree = "<group>"; };
+		DAEAB4341C0AA5D6003295DB /* MMBDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBDiscoverViewController.m; sourceTree = "<group>"; };
+		DAEAB4361C0AA5E0003295DB /* MMBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBHomeViewController.h; sourceTree = "<group>"; };
+		DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBHomeViewController.m; sourceTree = "<group>"; };
+		DAEAB4391C0AA5F0003295DB /* MMBMessageCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBMessageCenterViewController.h; sourceTree = "<group>"; };
+		DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBMessageCenterViewController.m; sourceTree = "<group>"; };
+		DAEAB43C1C0AA601003295DB /* MMBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBProfileViewController.h; sourceTree = "<group>"; };
+		DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBProfileViewController.m; sourceTree = "<group>"; };
 		EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +158,7 @@
 				DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */,
 				DAAC891E1C094F5E0000729C /* Info.plist */,
 				DAAC890E1C094F5E0000729C /* main.m */,
+				DAEAB42F1C0AA24A003295DB /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,6 +209,8 @@
 		DAAC89671C09701C0000729C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB4331C0AA5D6003295DB /* MMBDiscoverViewController.h */,
+				DAEAB4341C0AA5D6003295DB /* MMBDiscoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +250,8 @@
 		DAAC896C1C09701C0000729C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB4361C0AA5E0003295DB /* MMBHomeViewController.h */,
+				DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +280,7 @@
 		DAAC89701C09701C0000729C /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB4191C0A96DC003295DB /* Category */,
 				DAAC89711C09701C0000729C /* Controller */,
 				DAAC89721C09701C0000729C /* Model */,
 				DAAC89731C09701C0000729C /* Other */,
@@ -261,6 +292,10 @@
 		DAAC89711C09701C0000729C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB4161C0A9649003295DB /* MMBNavigationController.h */,
+				DAEAB4171C0A9649003295DB /* MMBNavigationController.m */,
+				DAEAB4301C0AA589003295DB /* MMBTabBarController.h */,
+				DAEAB4311C0AA589003295DB /* MMBTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +337,8 @@
 		DAAC89781C09701C0000729C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB4391C0AA5F0003295DB /* MMBMessageCenterViewController.h */,
+				DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +378,8 @@
 		DAAC897D1C09701C0000729C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAEAB43C1C0AA601003295DB /* MMBProfileViewController.h */,
+				DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +449,17 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		DAEAB4191C0A96DC003295DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */,
+				DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */,
+				DAEAB42C1C0AA133003295DB /* UIView+Extension.h */,
+				DAEAB42D1C0AA133003295DB /* UIView+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,7 +646,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
+				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
+				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
+				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
+				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
+				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,
+				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
+				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,6 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				GCC_PREFIX_HEADER = "My-Microblog/PrefixHeader.pch";
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";
@@ -741,6 +800,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				GCC_PREFIX_HEADER = "My-Microblog/PrefixHeader.pch";
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itcast.My-Microblog";

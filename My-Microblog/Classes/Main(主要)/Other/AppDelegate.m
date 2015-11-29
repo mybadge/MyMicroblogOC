@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MMBTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //创建窗口并设置大小
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //设置跟控制器
+    self.window.rootViewController = [[MMBTabBarController alloc] init];
+    //使其显示
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
