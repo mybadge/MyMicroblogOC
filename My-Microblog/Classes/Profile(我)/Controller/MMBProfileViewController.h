@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MMBProfileViewController : UIViewController
+@interface MMBProfileViewController : UITableViewController
 
 @end

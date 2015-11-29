@@ -8,20 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC389C679C8FC4750B8C394 /* libPods.a */; };
+		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; settings = {ASSET_TAGS = (); }; };
+		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
+		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
 		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
-		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4311C0AA589003295DB /* MMBTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4341C0AA5D6003295DB /* MMBDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; };
+		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; };
+		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; };
+		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; };
+		DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4311C0AA589003295DB /* MMBTabBarController.m */; };
+		DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4341C0AA5D6003295DB /* MMBDiscoverViewController.m */; };
+		DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */; };
+		DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */; };
+		DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,12 @@
 /* Begin PBXFileReference section */
 		1FC389C679C8FC4750B8C394 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		559A775C20C50223EEE9923A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA3DAE011C0AD63600D31A18 /* MMBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBSearchBar.h; sourceTree = "<group>"; };
+		DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBSearchBar.m; sourceTree = "<group>"; };
+		DA3DAE041C0ADF4900D31A18 /* MMBDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBDropdownMenu.h; sourceTree = "<group>"; };
+		DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBDropdownMenu.m; sourceTree = "<group>"; };
+		DA3DAE071C0AED9A00D31A18 /* MMBTitleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTitleMenuViewController.h; sourceTree = "<group>"; };
+		DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTitleMenuViewController.m; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,10 +193,10 @@
 		DAAC89651C09701C0000729C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DAAC89661C09701C0000729C /* Discover(发现) */,
 				DAAC896B1C09701C0000729C /* Home(首页) */,
-				DAAC89701C09701C0000729C /* Main(主要) */,
 				DAAC89771C09701C0000729C /* MessageCenter(消息) */,
+				DAAC89661C09701C0000729C /* Discover(发现) */,
+				DAAC89701C09701C0000729C /* Main(主要) */,
 				DAAC897C1C09701C0000729C /* Profile(我) */,
 				DAAC89811C09701C0000729C /* Temp(临时) */,
 				DAAC89861C09701C0000729C /* Tools */,
@@ -273,6 +282,8 @@
 		DAAC896F1C09701C0000729C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA3DAE071C0AED9A00D31A18 /* MMBTitleMenuViewController.h */,
+				DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +330,10 @@
 		DAAC89761C09701C0000729C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA3DAE011C0AD63600D31A18 /* MMBSearchBar.h */,
+				DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */,
+				DA3DAE041C0ADF4900D31A18 /* MMBDropdownMenu.h */,
+				DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,12 +663,15 @@
 			files = (
 				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
 				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
+				DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */,
+				DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */,
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
 				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
+				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 			);
@@ -786,6 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "My-Microblog/PrefixHeader.pch";
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -800,6 +819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "My-Microblog/PrefixHeader.pch";
 				INFOPLIST_FILE = "My-Microblog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

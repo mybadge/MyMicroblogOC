@@ -7,7 +7,7 @@
 //
 
 #import "MMBNavigationController.h"
-#import "UIBarButtonItem+Extension.h"
+
 
 @implementation MMBNavigationController
 
@@ -34,8 +34,8 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }
     //设置导航栏上的内容
-    viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithTaget:self action:@selector(back) image:@"navigationbar_back" highImage:@"navigationbar_back_highlighted"];
-    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTaget:self action:@selector(more) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
+    viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(back) image:@"navigationbar_back" highImage:@"navigationbar_back_highlighted"];
+    viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(more) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
     
     [super pushViewController:viewController animated:animated];
 }

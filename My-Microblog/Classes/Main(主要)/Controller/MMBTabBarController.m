@@ -27,6 +27,8 @@
     [self addCHildVc:homeVc title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     MMBMessageCenterViewController *messageCenterVc = [[MMBMessageCenterViewController alloc] init];
     [self addCHildVc:messageCenterVc title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
+    
+    
     MMBDiscoverViewController *discoverVc = [[MMBDiscoverViewController alloc] init];
     [self addCHildVc:discoverVc title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
@@ -56,15 +58,14 @@
     
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = MMBColor(123, 123, 123);
+    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
     selectTextAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    
-    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     
     //设置随机色
-    childVc.view.backgroundColor = MMBRandomColor;
+    //childVc.view.backgroundColor = MMBRandomColor;
     //先给外面传进来的小控制器 包装 一个导航控制器
     MMBNavigationController *nav = [[MMBNavigationController alloc] initWithRootViewController:childVc];
     [self addChildViewController:nav];
