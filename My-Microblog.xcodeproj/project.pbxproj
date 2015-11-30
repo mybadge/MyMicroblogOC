@@ -11,6 +11,8 @@
 		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; settings = {ASSET_TAGS = (); }; };
 		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
 		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -53,6 +55,10 @@
 		DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBDropdownMenu.m; sourceTree = "<group>"; };
 		DA3DAE071C0AED9A00D31A18 /* MMBTitleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTitleMenuViewController.h; sourceTree = "<group>"; };
 		DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTitleMenuViewController.m; sourceTree = "<group>"; };
+		DA3DAE0A1C0AFF1400D31A18 /* MMBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTabBar.h; sourceTree = "<group>"; };
+		DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTabBar.m; sourceTree = "<group>"; };
+		DA3DAE341C0C1FDB00D31A18 /* MMBNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNewFeatureViewController.h; sourceTree = "<group>"; };
+		DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNewFeatureViewController.m; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +135,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA3DAE321C0C1FA900D31A18 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DAE331C0C1FA900D31A18 /* Controller */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		DA3DAE331C0C1FA900D31A18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DAE341C0C1FDB00D31A18 /* MMBNewFeatureViewController.h */,
+				DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DAAC89011C094F5E0000729C = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +216,7 @@
 		DAAC89651C09701C0000729C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DA3DAE321C0C1FA900D31A18 /* NewFeature */,
 				DAAC896B1C09701C0000729C /* Home(首页) */,
 				DAAC89771C09701C0000729C /* MessageCenter(消息) */,
 				DAAC89661C09701C0000729C /* Discover(发现) */,
@@ -334,6 +358,8 @@
 				DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */,
 				DA3DAE041C0ADF4900D31A18 /* MMBDropdownMenu.h */,
 				DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */,
+				DA3DAE0A1C0AFF1400D31A18 /* MMBTabBar.h */,
+				DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -666,6 +692,7 @@
 				DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */,
 				DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */,
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
+				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
@@ -673,6 +700,7 @@
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
+				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

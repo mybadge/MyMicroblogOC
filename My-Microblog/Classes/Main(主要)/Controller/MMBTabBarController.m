@@ -12,8 +12,9 @@
 #import "MMBMessageCenterViewController.h"
 #import "MMBProfileViewController.h"
 #import "MMBNavigationController.h"
+#import "MMBTabBar.h"
 
-@interface MMBTabBarController ()
+@interface MMBTabBarController ()<MMBTabBarDelegate>
 
 @end
 
@@ -35,8 +36,18 @@
     MMBProfileViewController *profileVc = [[MMBProfileViewController alloc] init];
     [self addCHildVc:profileVc title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
+    MMBTabBar *tabBar = [[MMBTabBar alloc] init];
+    tabBar.delegate = self;
+    //利用KVC把系统的tabBar 换成自己的.
+    [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
+//tabBar的代理方法
+- (void)tabBarDidClickPlusButton:(MMBTabBar *)tabBar{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    //[self presentViewController:vc animated:YES completion:nil];
+}
 
 /**
  *  添加一个自控制器

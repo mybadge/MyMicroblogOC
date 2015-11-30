@@ -17,5 +17,5 @@
 @property (nonatomic, assign) CGPoint origin;
 
 @property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat CenterY;
+@property (nonatomic, assign) CGFloat centerY;
 @end
