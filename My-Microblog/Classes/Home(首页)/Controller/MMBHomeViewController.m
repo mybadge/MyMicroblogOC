@@ -99,14 +99,50 @@
         
         //结束刷新
         [control endRefreshing];
+        
+        // 显示最新微博的数量
+        [self showNewStatusCount:newStatuses.count];
+        
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         MMBLog(@"loadNewStatus.error = %@",error);
+        // 结束刷新
         [control endRefreshing];
     }];
     
 }
 
-//设置用户昵称
+- (void)showNewStatusCount:(NSInteger)count{
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.width = [UIScreen mainScreen].bounds.size.width;
+    label.height = 35;
+    if (count == 0) {
+        label.text = @"没有新的微博数据,请稍后再试";
+    }else{
+        label.text = [NSString stringWithFormat:@"共加载了%zd条新数据",count];
+    }
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:16];
+    label.y = 64 - label.height;
+    // 将label添加到导航控制器的view中，并且是盖在导航栏下边
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    CGFloat duration = 1.0;
+    [UIView animateWithDuration:duration animations:^{
+        //label.y = label.height;
+        label.transform = CGAffineTransformMakeTranslation(0, label.height);
+    }completion:^(BOOL finished) {
+        CGFloat delay = 1.0;
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+    
+}
+
+//获取用户信息(昵称)
 - (void)setupUserInfo{
     // https://api.weibo.com/2/users/show.json
     // access_token	falsestring	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
