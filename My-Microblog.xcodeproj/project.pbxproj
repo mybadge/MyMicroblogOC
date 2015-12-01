@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC389C679C8FC4750B8C394 /* libPods.a */; };
-		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; settings = {ASSET_TAGS = (); }; };
-		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
-		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
-		DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */; settings = {ASSET_TAGS = (); }; };
-		DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; };
+		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; };
+		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; };
+		DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */; };
+		DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */; };
+		DA3DAE3B1C0C32CC00D31A18 /* MMBOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE3A1C0C32CC00D31A18 /* MMBOAuthViewController.m */; };
+		DA600B431C0C956A002D05A1 /* MMBNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B421C0C956A002D05A1 /* MMBNetworkTool.m */; };
+		DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B471C0C9975002D05A1 /* MMBAccount.m */; };
+		DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4B1C0C9CAE002D05A1 /* MMBAccountTool.m */; };
+		DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */; };
+		DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B11C0D86990066A05D /* MMBTitleButton.m */; };
+		DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B41C0DB8EC0066A05D /* MMBUser.m */; };
+		DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B71C0DB9990066A05D /* MMBStatus.m */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -59,6 +67,22 @@
 		DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTabBar.m; sourceTree = "<group>"; };
 		DA3DAE341C0C1FDB00D31A18 /* MMBNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNewFeatureViewController.h; sourceTree = "<group>"; };
 		DA3DAE351C0C1FDB00D31A18 /* MMBNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNewFeatureViewController.m; sourceTree = "<group>"; };
+		DA3DAE391C0C32CC00D31A18 /* MMBOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBOAuthViewController.h; sourceTree = "<group>"; };
+		DA3DAE3A1C0C32CC00D31A18 /* MMBOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBOAuthViewController.m; sourceTree = "<group>"; };
+		DA600B411C0C956A002D05A1 /* MMBNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNetworkTool.h; sourceTree = "<group>"; };
+		DA600B421C0C956A002D05A1 /* MMBNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNetworkTool.m; sourceTree = "<group>"; };
+		DA600B461C0C9975002D05A1 /* MMBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBAccount.h; sourceTree = "<group>"; };
+		DA600B471C0C9975002D05A1 /* MMBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBAccount.m; sourceTree = "<group>"; };
+		DA600B4A1C0C9CAE002D05A1 /* MMBAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBAccountTool.h; sourceTree = "<group>"; };
+		DA600B4B1C0C9CAE002D05A1 /* MMBAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBAccountTool.m; sourceTree = "<group>"; };
+		DA600B4D1C0CAB39002D05A1 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
+		DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		DA9046B01C0D86990066A05D /* MMBTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTitleButton.h; sourceTree = "<group>"; };
+		DA9046B11C0D86990066A05D /* MMBTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTitleButton.m; sourceTree = "<group>"; };
+		DA9046B31C0DB8EC0066A05D /* MMBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBUser.h; sourceTree = "<group>"; };
+		DA9046B41C0DB8EC0066A05D /* MMBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBUser.m; sourceTree = "<group>"; };
+		DA9046B61C0DB9990066A05D /* MMBStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatus.h; sourceTree = "<group>"; };
+		DA9046B71C0DB9990066A05D /* MMBStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatus.m; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +176,44 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		DA3DAE371C0C329500D31A18 /* OAuth(授权) */ = {
+			isa = PBXGroup;
+			children = (
+				DA600B491C0C9C98002D05A1 /* Tool */,
+				DA600B441C0C9948002D05A1 /* Model */,
+				DA3DAE381C0C329500D31A18 /* Controller */,
+			);
+			name = "OAuth(授权)";
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		DA3DAE381C0C329500D31A18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA3DAE391C0C32CC00D31A18 /* MMBOAuthViewController.h */,
+				DA3DAE3A1C0C32CC00D31A18 /* MMBOAuthViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA600B441C0C9948002D05A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA600B461C0C9975002D05A1 /* MMBAccount.h */,
+				DA600B471C0C9975002D05A1 /* MMBAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA600B491C0C9C98002D05A1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DA600B4A1C0C9CAE002D05A1 /* MMBAccountTool.h */,
+				DA600B4B1C0C9CAE002D05A1 /* MMBAccountTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		DAAC89011C094F5E0000729C = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +278,7 @@
 		DAAC89651C09701C0000729C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DA3DAE371C0C329500D31A18 /* OAuth(授权) */,
 				DA3DAE321C0C1FA900D31A18 /* NewFeature */,
 				DAAC896B1C09701C0000729C /* Home(首页) */,
 				DAAC89771C09701C0000729C /* MessageCenter(消息) */,
@@ -292,6 +355,10 @@
 		DAAC896D1C09701C0000729C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA9046B31C0DB8EC0066A05D /* MMBUser.h */,
+				DA9046B41C0DB8EC0066A05D /* MMBUser.m */,
+				DA9046B61C0DB9990066A05D /* MMBStatus.h */,
+				DA9046B71C0DB9990066A05D /* MMBStatus.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +375,8 @@
 			children = (
 				DA3DAE071C0AED9A00D31A18 /* MMBTitleMenuViewController.h */,
 				DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */,
+				DA9046B01C0D86990066A05D /* MMBTitleButton.h */,
+				DA9046B11C0D86990066A05D /* MMBTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,6 +557,8 @@
 		DAAC89861C09701C0000729C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DA600B411C0C956A002D05A1 /* MMBNetworkTool.h */,
+				DA600B421C0C956A002D05A1 /* MMBNetworkTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -499,6 +570,8 @@
 				DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */,
 				DAEAB42C1C0AA133003295DB /* UIView+Extension.h */,
 				DAEAB42D1C0AA133003295DB /* UIView+Extension.m */,
+				DA600B4D1C0CAB39002D05A1 /* UIWindow+Extension.h */,
+				DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -687,6 +760,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA600B431C0C956A002D05A1 /* MMBNetworkTool.m in Sources */,
+				DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */,
 				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
 				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
 				DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */,
@@ -694,14 +769,20 @@
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
 				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
+				DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
 				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
+				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
+				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
+				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,
 				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
+				DA3DAE3B1C0C32CC00D31A18 /* MMBOAuthViewController.m in Sources */,
+				DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

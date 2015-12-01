@@ -13,8 +13,10 @@
 
 @optional
 - (void)tabBarDidClickPlusButton:(MMBTabBar *)tabBar;
-
 @end
+
 @interface MMBTabBar : UITabBar
+
 @property (nonatomic,weak) id<MMBTabBarDelegate> delegate;
+
 @end
