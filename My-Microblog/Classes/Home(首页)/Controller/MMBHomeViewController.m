@@ -60,8 +60,38 @@
     
     //集成上拉加载更多
     [self setupUpRefresh];
+    
+    //获得未读数
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(setupUnreadCount) userInfo:nil repeats:YES];
+    // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
 }
 
+/**
+ * 获得未读数
+ */
+- (void)setupUnreadCount{
+    MMBAccount *account = [MMBAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
+
+    [[MMBNetworkTool shareNetworkTool] GET:@"https://rm.api.weibo.com/2/remind/unread_count.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSLog(@"setupUnreadCount = %@",responseObject);
+        NSString *status = [responseObject[@"status"] description];
+        if ([status intValue] == 0) {
+            self.tabBarItem.badgeValue = nil;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        }else{
+            self.tabBarItem.badgeValue = status;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = [status intValue];
+        }
+        
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        MMBLog(@"setupUnreadCount.error = %@",error);
+    }];
+}
 
 /**
  * 集成刷新控件
@@ -302,8 +332,8 @@
     CGFloat judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - self.tableView.tableFooterView.height;
     if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
         self.tableView.tableFooterView.hidden = NO;
+        //加载数据
         [self loadMoreStatus];
-    
     }
 }
 
