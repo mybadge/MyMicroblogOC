@@ -21,6 +21,8 @@
 		DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B11C0D86990066A05D /* MMBTitleButton.m */; };
 		DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B41C0DB8EC0066A05D /* MMBUser.m */; };
 		DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B71C0DB9990066A05D /* MMBStatus.m */; };
+		DA9046BB1C0DDF650066A05D /* MMBLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */; };
+		DA9046BD1C0DDF820066A05D /* MMBLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -83,6 +85,9 @@
 		DA9046B41C0DB8EC0066A05D /* MMBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBUser.m; sourceTree = "<group>"; };
 		DA9046B61C0DB9990066A05D /* MMBStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatus.h; sourceTree = "<group>"; };
 		DA9046B71C0DB9990066A05D /* MMBStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatus.m; sourceTree = "<group>"; };
+		DA9046B91C0DDF650066A05D /* MMBLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBLoadMoreFooter.h; sourceTree = "<group>"; };
+		DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBLoadMoreFooter.m; sourceTree = "<group>"; };
+		DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMBLoadMoreFooter.xib; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,6 +382,9 @@
 				DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */,
 				DA9046B01C0D86990066A05D /* MMBTitleButton.h */,
 				DA9046B11C0D86990066A05D /* MMBTitleButton.m */,
+				DA9046B91C0DDF650066A05D /* MMBLoadMoreFooter.h */,
+				DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */,
+				DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,6 +696,7 @@
 			files = (
 				DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */,
 				DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */,
+				DA9046BD1C0DDF820066A05D /* MMBLoadMoreFooter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +789,7 @@
 				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
 				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,
 				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
+				DA9046BB1C0DDF650066A05D /* MMBLoadMoreFooter.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 				DA3DAE3B1C0C32CC00D31A18 /* MMBOAuthViewController.m in Sources */,
 				DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */,

@@ -17,6 +17,7 @@
 #import "MMBUser.h"
 #import "MMBStatus.h"
 #import "MJExtension.h"
+#import "MMBLoadMoreFooter.h"
 
 @interface MMBHomeViewController ()<MMBDropdownMenuDelegate>
 
@@ -46,31 +47,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.rowHeight = 70;
+    
     //设置导航栏
     [self setupNav];
     
     //更改用户信息
     [self setupUserInfo];
     
-    //集成刷新控件
-    [self setupRefresh];
+    //集成下拉刷新控件
+    [self setupDownRefresh];
+    
+    //集成上拉加载更多
+    [self setupUpRefresh];
 }
 
 
 /**
  * 集成刷新控件
  */
-- (void)setupRefresh{
+- (void)setupDownRefresh{
+    //1.添加刷新控件
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
+    [refreshControl addTarget:self action:@selector(loadNewStatus:) forControlEvents:UIControlEventValueChanged];
     //添加到父控制器中
     [self.tableView addSubview:refreshControl];
+    
+     // 2.马上进入刷新状态(仅仅是显示刷新状态，并不会触发UIControlEventValueChanged事件)
+    [refreshControl beginRefreshing];
+    [self loadNewStatus:refreshControl];
 }
 
 /**
  *  UIRefreshControl进入刷新状态：加载最新的数据
  */
-- (void)refreshStateChange:(UIRefreshControl *)control{
+- (void)loadNewStatus:(UIRefreshControl *)control{
     MMBAccount *account = [MMBAccountTool account];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = account.access_token;
@@ -82,7 +93,6 @@
         // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0
         params[@"since_id"] = firstStatus.idstr;
     }
-    
     
     [[MMBNetworkTool shareNetworkTool] GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         //MMBLog(@"%@",responseObject);
@@ -108,8 +118,52 @@
         // 结束刷新
         [control endRefreshing];
     }];
-    
 }
+
+//下拉刷新
+- (void)setupUpRefresh{
+    MMBLoadMoreFooter *footer = [MMBLoadMoreFooter footer];
+    footer.hidden = YES;
+    self.tableView.tableFooterView = footer;
+}
+
+/**
+ *  UIRefreshControl进入刷新状态：加载最新的数据
+ */
+- (void)loadMoreStatus{
+    MMBAccount *account = [MMBAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    
+    // 取出最前面的微博（最新的微博，ID最大的微博）
+    MMBStatus *lastStatus = [self.statuses lastObject];
+    if (lastStatus) {
+        // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
+        // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
+        long long maxId = [lastStatus.idstr longLongValue] - 1;
+        params[@"max_id"] = @(maxId);
+    }
+    
+    [[MMBNetworkTool shareNetworkTool] GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        //MMBLog(@"%@",responseObject);
+        
+        // 将 "微博字典"数组 转为 "微博模型"数组
+        NSArray *newStatuses = [MMBStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+       
+        [self.statuses addObjectsFromArray:newStatuses];
+        //刷新表格
+        [self.tableView reloadData];
+        
+        // 结束刷新
+        self.tableView.tableFooterView.hidden = YES;
+        
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        MMBLog(@"loadMoreStatus.error = %@",error);
+        // 结束刷新
+        self.tableView.tableFooterView.hidden = YES;
+    }];
+}
+
 
 - (void)showNewStatusCount:(NSInteger)count{
     UILabel *label = [[UILabel alloc] init];
@@ -127,19 +181,22 @@
     label.y = 64 - label.height;
     // 将label添加到导航控制器的view中，并且是盖在导航栏下边
     [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
     CGFloat duration = 1.0;
+    
     [UIView animateWithDuration:duration animations:^{
         //label.y = label.height;
         label.transform = CGAffineTransformMakeTranslation(0, label.height);
     }completion:^(BOOL finished) {
         CGFloat delay = 1.0;
+        // 延迟1s后，再利用1s的时间，让label往上移动一段距离（回到一开始的状态）
         [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
             label.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
             [label removeFromSuperview];
         }];
     }];
-    
+    // 如果某个动画执行完毕后，又要回到动画执行前的状态，建议使用transform来做动画
 }
 
 //获取用户信息(昵称)
@@ -229,7 +286,7 @@
     MMBUser *user = status.user;
     cell.textLabel.text = user.name;
     cell.detailTextLabel.text = status.text;
-    
+    cell.detailTextLabel.numberOfLines = 2;
     NSString *imageUrl = user.profile_image_url;
     UIImage *placeholder = [UIImage imageNamed:@"avatar_default_small"];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl ] placeholderImage:placeholder];
@@ -237,5 +294,17 @@
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (self.tableView.tableFooterView.isHidden == NO || self.statuses.count == 0) return;
+    
+    CGFloat offsetY = scrollView.contentOffset.y;
+    // 当最后一个cell完全显示在眼前时，contentOffset的y值
+    CGFloat judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - self.tableView.tableFooterView.height;
+    if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
+        self.tableView.tableFooterView.hidden = NO;
+        [self loadMoreStatus];
+    
+    }
+}
 
 @end
