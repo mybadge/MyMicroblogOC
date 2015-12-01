@@ -52,32 +52,59 @@
     //更改用户信息
     [self setupUserInfo];
     
-    //加载最新的微博数据
-    [self loadNewStatus];
+    //集成刷新控件
+    [self setupRefresh];
 }
 
 
-- (void)loadNewStatus{
-    MMBAccount *account = [MMBAccountTool account];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"access_token"] = account.access_token;
-    params[@"uid"] = account.uid;
-    [[MMBNetworkTool shareNetworkTool] GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        MMBLog(@"%@",responseObject);
-        if (responseObject) {
-            self.statuses = [MMBStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-            //刷新表格
-            [self.tableView reloadData];
-        }
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        MMBLog(@"loadNewStatus.error = %@",error);
-    }];
+/**
+ * 集成刷新控件
+ */
+- (void)setupRefresh{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
+    //添加到父控制器中
+    [self.tableView addSubview:refreshControl];
 }
 
 /**
- *
+ *  UIRefreshControl进入刷新状态：加载最新的数据
  */
-
+- (void)refreshStateChange:(UIRefreshControl *)control{
+    MMBAccount *account = [MMBAccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    //params[@"uid"] = account.uid;
+    
+    // 取出最前面的微博（最新的微博，ID最大的微博）
+    MMBStatus *firstStatus = [self.statuses firstObject];
+    if (firstStatus) {
+        // 若指定此参数，则返回ID比since_id大的微博（即比since_id时间晚的微博），默认为0
+        params[@"since_id"] = firstStatus.idstr;
+    }
+    
+    
+    [[MMBNetworkTool shareNetworkTool] GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        //MMBLog(@"%@",responseObject);
+        
+        // 将 "微博字典"数组 转为 "微博模型"数组
+        NSArray *newStatuses = [MMBStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        // 将最新的微博数据，添加到总数组的最前面
+        NSRange range = NSMakeRange(0, newStatuses.count);
+        NSIndexSet *set = [[NSIndexSet alloc] initWithIndexesInRange:range];
+        [self.statuses insertObjects:newStatuses atIndexes:set];
+        
+        //刷新表格
+        [self.tableView reloadData];
+        
+        //结束刷新
+        [control endRefreshing];
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        MMBLog(@"loadNewStatus.error = %@",error);
+        [control endRefreshing];
+    }];
+    
+}
 
 //设置用户昵称
 - (void)setupUserInfo{
@@ -103,7 +130,7 @@
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         NSLog(@"请求失败 error= %@",error);
     }];
-
+    
 }
 
 
@@ -118,11 +145,11 @@
     
     //设置中间标题按钮
     MMBTitleButton *titleButton = [[MMBTitleButton alloc] init];
-//    titleButton.width = 150;
-//    titleButton.height = 30;
+    //    titleButton.width = 150;
+    //    titleButton.height = 30;
     NSString *name = [[MMBAccountTool account] name];
     [titleButton setTitle:name ? name:@"首页" forState:UIControlStateNormal];
-
+    
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.titleView = titleButton;
