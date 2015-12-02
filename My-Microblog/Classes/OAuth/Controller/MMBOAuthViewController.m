@@ -36,7 +36,7 @@
      client_id	true	string	申请应用时分配的AppKey。
      redirect_uri	true	string	授权回调地址，站外应用需与设置的回调地址一致，站内应用需填写canvas page的地址。
      */
-    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=2492369838&redirect_uri=http://"];
+    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=2492369838&redirect_uri=http://www.baidu.com"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
 }
@@ -78,7 +78,7 @@
     params[@"client_id"] = @"2492369838";
     params[@"client_secret"] = @"47731e717d9338fbe53f46518f150eb1";
     params[@"grant_type"] = @"authorization_code";
-    params[@"redirect_uri"] = @"http://";
+    params[@"redirect_uri"] = @"http://www.baidu.com";
     params[@"code"] = code;
     
     // 3.发送请求

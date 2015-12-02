@@ -149,6 +149,7 @@
         NSArray *newStatuses = [MMBStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         // 将statuses 装换为 statusFrame
         NSArray *newFrames = [self statusFramesWithStatuses:newStatuses];
+         //MMBLog(@"%@",newFrames);
         // 将最新的微博数据，添加到总数组的最前面
         NSRange range = NSMakeRange(0, newFrames.count);
         NSIndexSet *set = [[NSIndexSet alloc] initWithIndexesInRange:range];
@@ -264,11 +265,11 @@
     [[MMBNetworkTool shareNetworkTool] GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         //NSLog(@"微博账号信息 = %@",responseObject);
         UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
-        NSString *name = responseObject[@"name"];
-        [titleButton setTitle:name forState:UIControlStateNormal];
+        MMBUser *user = [MMBUser mj_objectWithKeyValues:responseObject];
+        [titleButton setTitle:user.name forState:UIControlStateNormal];
         
         //存储昵称到沙盒中
-        account.name = name;
+        account.name = user.name;
         [MMBAccountTool saveAccount:account];
         
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {

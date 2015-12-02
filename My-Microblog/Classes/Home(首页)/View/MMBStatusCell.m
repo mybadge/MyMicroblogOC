@@ -11,6 +11,7 @@
 #import "MMBUser.h"
 #import "MMBStatus.h"
 #import "UIImageView+WebCache.h"
+#import "MMBPhoto.h"
 
 @interface MMBStatusCell ()
 /** 原创微博 */
@@ -126,8 +127,16 @@
     }
     
     /** 配图 */
-    self.photoView.frame = statusFrame.photoViewF;
-    self.photoView.backgroundColor = [UIColor redColor];
+    if (status.pic_urls.count) {
+        self.photoView.frame = statusFrame.photoViewF;
+        MMBPhoto *photo = [status.pic_urls firstObject];
+        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        self.photoView.hidden = NO;
+    }else{
+        self.photoView.hidden = YES;
+    }
+    
+    
     
     /** 昵称 */
     self.nameLabel.text = user.name;
@@ -135,6 +144,7 @@
     
     /** 时间 */
     self.timeLabel.text = status.created_at;
+    self.timeLabel.frame = statusFrame.timeLabelF;
     
     /** 来源 */
     self.sourceLabel.text = status.source;

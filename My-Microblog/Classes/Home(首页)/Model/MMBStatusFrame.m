@@ -60,7 +60,7 @@
     self.timeLabelF = (CGRect){{ timeX, timeY }, timeSize };
     
     /** 来源 */
-    CGFloat sourceX = CGRectGetMidX(self.timeLabelF) + MMBStatusCellBorderW;
+    CGFloat sourceX = CGRectGetMaxX(self.timeLabelF) + MMBStatusCellBorderW;
     CGFloat sourceY = timeY;
     CGSize sourceSize = [self sizeWithText:status.source font:MMBStatusCellSourceFont];
     self.sourceLabelF = (CGRect){{ sourceX, sourceY }, sourceSize };
@@ -73,12 +73,21 @@
     self.contentLabelF = (CGRect){{ contentX, contentY }, contentSize };
 
     /** 配图 */
+    CGFloat originalH = 0;
+    if (status.pic_urls.count){
+        CGFloat photoWH = 80;
+        CGFloat photoX = contentX;
+        CGFloat photoY = CGRectGetMaxY(self.contentLabelF) + MMBStatusCellBorderW;
+        self.photoViewF = CGRectMake(photoX, photoY, photoWH, photoWH);
+        originalH = CGRectGetMaxY(self.photoViewF) + MMBStatusCellBorderW;
+    }else{
+        originalH = CGRectGetMaxY(self.contentLabelF) + MMBStatusCellBorderW;
+    }
     
     /** 原创微博整体 */
     CGFloat originalX = 0;
     CGFloat originalY = 0;
     CGFloat originalW = cellW;
-    CGFloat originalH = CGRectGetMaxY(self.contentLabelF) + MMBStatusCellBorderW;
     self.originalViewF = CGRectMake(originalX, originalY, originalW, originalH);
 
     self.cellHeight = CGRectGetMaxY(self.originalViewF);

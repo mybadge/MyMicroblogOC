@@ -11,6 +11,7 @@
 #import "MMBAccountTool.h"
 #import "MMBAccount.h"
 #import "UIWindow+Extension.h"
+#import <SDWebImageManager.h>
 
 
 @interface AppDelegate ()
@@ -30,7 +31,7 @@
     }else{
         self.window.rootViewController = [[MMBOAuthViewController alloc] init];
     }
-    
+
     //使其显示
     [self.window makeKeyAndVisible];
     return YES;
@@ -56,6 +57,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    SDWebImageManager *mgr = [SDWebImageManager sharedManager];
+    //取消下载任务
+    [mgr cancelAll];
+    
+    //清理内存
+    [mgr.imageCache clearMemory];
 }
 
 @end
