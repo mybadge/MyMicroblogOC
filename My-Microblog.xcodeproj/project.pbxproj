@@ -23,6 +23,8 @@
 		DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B71C0DB9990066A05D /* MMBStatus.m */; };
 		DA9046BB1C0DDF650066A05D /* MMBLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */; };
 		DA9046BD1C0DDF820066A05D /* MMBLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */; };
+		DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046BF1C0DF4740066A05D /* MMBStatusFrame.m */; };
+		DA9046C31C0DF4920066A05D /* MMBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046C21C0DF4920066A05D /* MMBStatusCell.m */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -88,6 +90,10 @@
 		DA9046B91C0DDF650066A05D /* MMBLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBLoadMoreFooter.h; sourceTree = "<group>"; };
 		DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBLoadMoreFooter.m; sourceTree = "<group>"; };
 		DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMBLoadMoreFooter.xib; sourceTree = "<group>"; };
+		DA9046BE1C0DF4740066A05D /* MMBStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusFrame.h; sourceTree = "<group>"; };
+		DA9046BF1C0DF4740066A05D /* MMBStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusFrame.m; sourceTree = "<group>"; };
+		DA9046C11C0DF4920066A05D /* MMBStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusCell.h; sourceTree = "<group>"; };
+		DA9046C21C0DF4920066A05D /* MMBStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusCell.m; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -364,6 +370,8 @@
 				DA9046B41C0DB8EC0066A05D /* MMBUser.m */,
 				DA9046B61C0DB9990066A05D /* MMBStatus.h */,
 				DA9046B71C0DB9990066A05D /* MMBStatus.m */,
+				DA9046BE1C0DF4740066A05D /* MMBStatusFrame.h */,
+				DA9046BF1C0DF4740066A05D /* MMBStatusFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -385,6 +393,8 @@
 				DA9046B91C0DDF650066A05D /* MMBLoadMoreFooter.h */,
 				DA9046BA1C0DDF650066A05D /* MMBLoadMoreFooter.m */,
 				DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */,
+				DA9046C11C0DF4920066A05D /* MMBStatusCell.h */,
+				DA9046C21C0DF4920066A05D /* MMBStatusCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -779,9 +789,11 @@
 				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */,
+				DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
 				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,
+				DA9046C31C0DF4920066A05D /* MMBStatusCell.m in Sources */,
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
