@@ -21,12 +21,14 @@
 /** 正文字体 */
 #define MMBStatusCellContentFont [UIFont systemFontOfSize:14]
 
+/** 被转发微博的正文字体 */
+#define MMBStatusCellRetweetContentFont [UIFont systemFontOfSize:13]
 
 @class MMBStatus;
 
 @interface MMBStatusFrame : NSObject
 @property (nonatomic,strong) MMBStatus *status;
-
+/** 原创微博 */
 /** 原创微博整体 */
 @property (nonatomic,assign) CGRect originalViewF;
 /** 头像 */
@@ -44,7 +46,19 @@
 /** 正文 */
 @property (nonatomic,assign) CGRect contentLabelF;
 
+
+/** 转发微博 */
+/** 转发微博整体 */
+@property (nonatomic, assign) CGRect retweetViewF;
+/** 转发微博正文和昵称 */
+@property (nonatomic, assign) CGRect retweetContentLabelF;
+/** 转发配图 */
+@property (nonatomic, assign) CGRect retweetPhotoViewF;
+
+
 /** cell的高度 */
 @property (nonatomic,assign) CGFloat cellHeight;
+
+
 
 @end
