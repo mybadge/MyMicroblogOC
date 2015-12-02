@@ -19,6 +19,7 @@
 		DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4B1C0C9CAE002D05A1 /* MMBAccountTool.m */; };
 		DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */; };
 		DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F21C0EB83E000BEE79 /* MMBPhoto.m */; settings = {ASSET_TAGS = (); }; };
+		DA8EB9F61C0EF53A000BEE79 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F51C0EF53A000BEE79 /* NSDate+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B11C0D86990066A05D /* MMBTitleButton.m */; };
 		DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B41C0DB8EC0066A05D /* MMBUser.m */; };
 		DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B71C0DB9990066A05D /* MMBStatus.m */; };
@@ -84,6 +85,8 @@
 		DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		DA8EB9F11C0EB83E000BEE79 /* MMBPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBPhoto.h; sourceTree = "<group>"; };
 		DA8EB9F21C0EB83E000BEE79 /* MMBPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBPhoto.m; sourceTree = "<group>"; };
+		DA8EB9F41C0EF53A000BEE79 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		DA8EB9F51C0EF53A000BEE79 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		DA9046B01C0D86990066A05D /* MMBTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTitleButton.h; sourceTree = "<group>"; };
 		DA9046B11C0D86990066A05D /* MMBTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTitleButton.m; sourceTree = "<group>"; };
 		DA9046B31C0DB8EC0066A05D /* MMBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBUser.h; sourceTree = "<group>"; };
@@ -589,6 +592,8 @@
 		DAEAB4191C0A96DC003295DB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DA8EB9F41C0EF53A000BEE79 /* NSDate+Extension.h */,
+				DA8EB9F51C0EF53A000BEE79 /* NSDate+Extension.m */,
 				DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */,
 				DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */,
 				DAEAB42C1C0AA133003295DB /* UIView+Extension.h */,
@@ -784,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8EB9F61C0EF53A000BEE79 /* NSDate+Extension.m in Sources */,
 				DA600B431C0C956A002D05A1 /* MMBNetworkTool.m in Sources */,
 				DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */,
 				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
