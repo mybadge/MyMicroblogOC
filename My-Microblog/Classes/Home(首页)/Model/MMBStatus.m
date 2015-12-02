@@ -93,7 +93,13 @@
     NSRange range;
     range.location = [source rangeOfString:@">"].location + 1;
     range.length = [source rangeOfString:@"</"].location - range.location;
-    //    range.length = [source rangeOfString:@"<" options:NSBackwardsSearch];
-    _source = [NSString stringWithFormat:@"来自%@", [source substringWithRange:range]];
+    //NSLog(@"%zd  length = %zd",range.location, range.length);
+     //    range.length = [source rangeOfString:@"<" options:NSBackwardsSearch];
+    if (range.length == -1) {
+        NSLog(@"%@",source);
+        _source = @"来自火星";
+    }else{
+        _source = [NSString stringWithFormat:@"来自%@", [source substringWithRange:range]];
+    }
 }
 @end

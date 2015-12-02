@@ -20,13 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationItem
-   MMBSearchBar *searchBar = [MMBSearchBar searchBar];
+    
+    MMBSearchBar *searchBar = [MMBSearchBar searchBar];
     searchBar.width = [UIScreen mainScreen].bounds.size.width-40;
     searchBar.height = 35;
     self.navigationItem.titleView = searchBar;
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
+    [searchBar addTarget:self action:@selector(endChange) forControlEvents:UIControlEventEditingDidEndOnExit];
+}
+
+- (void)endChange{
+    [self.view endEditing:YES];
 }
 
 

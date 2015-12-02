@@ -54,6 +54,9 @@
 @property (nonatomic, assign) CGRect retweetContentLabelF;
 /** 转发配图 */
 @property (nonatomic, assign) CGRect retweetPhotoViewF;
+/** 底部工具条 */
+@property (nonatomic, assign) CGRect toolbarF;
+
 
 
 /** cell的高度 */

@@ -92,7 +92,7 @@
     self.originalViewF = CGRectMake(originalX, originalY, originalW, originalH);
     
     
-    
+    CGFloat toolbarY = 0;
     /** 被转发微博 */
     if (status.retweeted_status){
         MMBStatus *retweeted_status = status.retweeted_status;
@@ -124,15 +124,18 @@
         CGFloat retweetW = cellW;
         self.retweetViewF = CGRectMake(retweetX, retweetY, retweetW, retweetH);
         
-        //算一下cell 的高度
-        self.cellHeight = CGRectGetMaxY(self.retweetViewF);
+        toolbarY = CGRectGetMaxY(self.retweetViewF);
     }else{
-        self.cellHeight = CGRectGetMaxY(self.originalViewF);
+        toolbarY = CGRectGetMaxY(self.originalViewF);
     }
     
+    CGFloat toolbarX = MMBStatusCellBorderW;
+    CGFloat toolbarW = cellW;
+    CGFloat toolbarH = 35;
+    self.toolbarF = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);
     
-    
-    
+    //算一下cell 的高度
+    self.cellHeight = CGRectGetMaxY(self.toolbarF);
     
     
     

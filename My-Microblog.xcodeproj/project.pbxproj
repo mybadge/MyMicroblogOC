@@ -18,8 +18,8 @@
 		DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B471C0C9975002D05A1 /* MMBAccount.m */; };
 		DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4B1C0C9CAE002D05A1 /* MMBAccountTool.m */; };
 		DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA600B4E1C0CAB39002D05A1 /* UIWindow+Extension.m */; };
-		DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F21C0EB83E000BEE79 /* MMBPhoto.m */; settings = {ASSET_TAGS = (); }; };
-		DA8EB9F61C0EF53A000BEE79 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F51C0EF53A000BEE79 /* NSDate+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F21C0EB83E000BEE79 /* MMBPhoto.m */; };
+		DA8EB9F61C0EF53A000BEE79 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB9F51C0EF53A000BEE79 /* NSDate+Extension.m */; };
 		DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B11C0D86990066A05D /* MMBTitleButton.m */; };
 		DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B41C0DB8EC0066A05D /* MMBUser.m */; };
 		DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046B71C0DB9990066A05D /* MMBStatus.m */; };
@@ -33,6 +33,7 @@
 		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
 		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; };
+		DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */; };
 		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; };
 		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; };
 		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; };
@@ -113,6 +114,8 @@
 		DAAC89341C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAAC89741C09701C0000729C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAAC89751C09701C0000729C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAE09FBC1C0F21C8001B38AF /* MMBStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusToolbar.h; sourceTree = "<group>"; };
+		DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusToolbar.m; sourceTree = "<group>"; };
 		DAEAB4161C0A9649003295DB /* MMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNavigationController.h; sourceTree = "<group>"; };
 		DAEAB4171C0A9649003295DB /* MMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNavigationController.m; sourceTree = "<group>"; };
 		DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */,
 				DA9046C11C0DF4920066A05D /* MMBStatusCell.h */,
 				DA9046C21C0DF4920066A05D /* MMBStatusCell.m */,
+				DAE09FBC1C0F21C8001B38AF /* MMBStatusToolbar.h */,
+				DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
+				DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
 				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,

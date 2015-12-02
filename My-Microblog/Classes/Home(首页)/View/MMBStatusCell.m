@@ -12,6 +12,7 @@
 #import "MMBStatus.h"
 #import "UIImageView+WebCache.h"
 #import "MMBPhoto.h"
+#import "MMBStatusToolbar.h"
 
 @interface MMBStatusCell ()
 /** 原创微博 */
@@ -41,6 +42,8 @@
 /** 转发配图 */
 @property (nonatomic,weak) UIImageView *retweetPhotoView;
 
+/** 工具条 */
+@property (nonatomic, weak) MMBStatusToolbar *toolbar;
 @end
 
 @implementation MMBStatusCell
@@ -62,8 +65,20 @@
        
         //转发微博
         [self setupRetweet];
+        
+        //初始化工具条
+        [self setupToolbar];
     }
     return self;
+}
+
+/**
+ * 初始化工具条
+ */
+- (void)setupToolbar{
+    MMBStatusToolbar *toolbar = [MMBStatusToolbar toolbar];
+    [self.contentView addSubview:toolbar];
+    self.toolbar = toolbar;
 }
 
 /**
@@ -217,6 +232,10 @@
     }else{
         self.retweetView.hidden = YES;
     }
+    
+    /** 工具条 */
+    self.toolbar.frame = statusFrame.toolbarF;
+    self.toolbar.status = status;
 }
 
 
