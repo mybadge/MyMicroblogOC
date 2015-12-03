@@ -10,8 +10,11 @@
 #import "MMBStatus.h"
 #import "MMBUser.h"
 
-// cell的边框宽度
+/** cell的边框宽度 */
 #define MMBStatusCellBorderW 10
+
+/** cell之间的宽度 */
+#define MMBStatusCellMargin 12
 
 @implementation MMBStatusFrame
 
@@ -87,7 +90,7 @@
     
     /** 原创微博整体 */
     CGFloat originalX = 0;
-    CGFloat originalY = 0;
+    CGFloat originalY = 0 + MMBStatusCellMargin;
     CGFloat originalW = cellW;
     self.originalViewF = CGRectMake(originalX, originalY, originalW, originalH);
     
@@ -129,7 +132,7 @@
         toolbarY = CGRectGetMaxY(self.originalViewF);
     }
     
-    CGFloat toolbarX = MMBStatusCellBorderW;
+    CGFloat toolbarX = 0;
     CGFloat toolbarW = cellW;
     CGFloat toolbarH = 35;
     self.toolbarF = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);

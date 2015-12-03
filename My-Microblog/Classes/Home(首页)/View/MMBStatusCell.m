@@ -60,6 +60,9 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = MMBColor(221, 221, 221);
         //原创微博
         [self setupOriginal];
        
@@ -87,7 +90,7 @@
 - (void)setupRetweet{
     //转发微博整体
     UIView *retweetView = [[UIView alloc] init];
-    retweetView.backgroundColor = MMBColor(240, 240, 240);
+    retweetView.backgroundColor = MMBColor(247, 247, 247);
     [self.contentView addSubview:retweetView];
     self.retweetView = retweetView;
     
@@ -109,6 +112,7 @@
 - (void)setupOriginal{
     /** 原创微博整体 */
     UIView *originnalView = [[UIView alloc] init];
+    originnalView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:originnalView];
     self.originnalView = originnalView;
     

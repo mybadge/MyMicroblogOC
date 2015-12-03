@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     MMBSearchBar *searchBar = [MMBSearchBar searchBar];
-    searchBar.width = [UIScreen mainScreen].bounds.size.width-40;
+    searchBar.width = [UIScreen mainScreen].bounds.size.width - 40;
     searchBar.height = 35;
     self.navigationItem.titleView = searchBar;
     self.navigationItem.leftBarButtonItem = nil;
