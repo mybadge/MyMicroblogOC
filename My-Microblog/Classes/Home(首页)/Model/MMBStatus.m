@@ -99,6 +99,7 @@
         NSLog(@"%@",source);
         _source = @"来自火星";
     }else{
+        //NSLog(@"%@",source);
         _source = [NSString stringWithFormat:@"来自%@", [source substringWithRange:range]];
     }
 }

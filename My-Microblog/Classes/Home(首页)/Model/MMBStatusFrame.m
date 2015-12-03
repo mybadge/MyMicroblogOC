@@ -9,6 +9,7 @@
 #import "MMBStatusFrame.h"
 #import "MMBStatus.h"
 #import "MMBUser.h"
+#import "MMBStatusPhotosView.h"
 
 /** cell的边框宽度 */
 #define MMBStatusCellBorderW 10
@@ -60,7 +61,7 @@
     CGFloat timeX = nameX;
     CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + MMBStatusCellBorderW;
     CGSize timeSize = [self sizeWithText:status.created_at font:MMBStatusCellTimeFont];
-    self.timeLabelF = (CGRect){{ timeX, timeY }, timeSize };
+    self.timeLabelF = (CGRect){ timeX, timeY , timeSize.width + 2, timeSize.height };
     
     /** 来源 */
     CGFloat sourceX = CGRectGetMaxX(self.timeLabelF) + MMBStatusCellBorderW;
@@ -79,10 +80,12 @@
     /** 配图 */
     CGFloat originalH = 0;
     if (status.pic_urls.count){
-        CGFloat photoWH = 80;
+        //CGFloat photoWH = 100;
         CGFloat photoX = contentX;
         CGFloat photoY = CGRectGetMaxY(self.contentLabelF) + MMBStatusCellBorderW;
-        self.photoViewF = CGRectMake(photoX, photoY, photoWH, photoWH);
+        CGSize photoViewSize = [MMBStatusPhotosView sizeWithCount:status.pic_urls.count];
+        
+        self.photoViewF = (CGRect){{ photoX, photoY}, photoViewSize};
         originalH = CGRectGetMaxY(self.photoViewF) + MMBStatusCellBorderW;
     }else{
         originalH = CGRectGetMaxY(self.contentLabelF) + MMBStatusCellBorderW;
@@ -104,21 +107,23 @@
         /** 被转发微博的正文 */
         CGFloat retweetContentX = MMBStatusCellBorderW;
         CGFloat retweetContentY = MMBStatusCellBorderW;
-        NSString *retweetContent = [NSString stringWithFormat:@"%@ : %@",retweeted_status_user.name, retweeted_status.text];
+        NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@",retweeted_status_user.name, retweeted_status.text];
         CGSize retweetContentSize = [self sizeWithText:retweetContent font:MMBStatusCellRetweetContentFont maxW:maxW];
         self.retweetContentLabelF = (CGRect){{retweetContentX, retweetContentY},retweetContentSize};
         
         /** 被转发微博配图 */
         CGFloat retweetH = 0;
         if (retweeted_status.pic_urls.count) {
-            CGFloat retweetPhotoWH = 80;
+            //CGFloat retweetPhotoWH = 100;
             CGFloat retweetPhotoX = retweetContentX;
             CGFloat retweetPhotoY = CGRectGetMaxY(self.retweetContentLabelF) + MMBStatusCellBorderW;
-            self.retweetPhotoViewF = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
             
-            retweetH = CGRectGetMaxY(self.retweetPhotoViewF);
+            CGSize retweetPhotoSize = [MMBStatusPhotosView sizeWithCount:retweeted_status.pic_urls.count];
+            self.retweetPhotoViewF = (CGRect){{retweetPhotoX, retweetPhotoY}, retweetPhotoSize};
+            
+            retweetH = CGRectGetMaxY(self.retweetPhotoViewF) + MMBStatusCellMargin;
         }else{
-            retweetH = CGRectGetMaxY(self.retweetContentLabelF);
+            retweetH = CGRectGetMaxY(self.retweetContentLabelF) + MMBStatusCellMargin;
         }
         
         /** 被转发微博整体 */

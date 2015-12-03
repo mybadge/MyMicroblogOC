@@ -51,8 +51,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.rowHeight = 70;
-    
+    //self.tableView.rowHeight = 70;
+    self.tableView.backgroundColor = MMBColor(211, 211, 211);
+
     //设置导航栏
     [self setupNav];
     

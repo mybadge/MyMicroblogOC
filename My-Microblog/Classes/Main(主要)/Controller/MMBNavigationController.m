@@ -12,18 +12,7 @@
 @implementation MMBNavigationController
 
 - (void)viewDidLoad{
-    //设置整个项目所有Item的主题样式
-    UIBarButtonItem *item = [UIBarButtonItem appearance];
-    //设置普通状态
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
-textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
-    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-    //设置不可用状态
-    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
-    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
-    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
-    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    
     
     
 //    [self.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] }];
@@ -31,22 +20,18 @@ textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
 }
 
 + (void)initialize{
-   //    // 设置整个项目所有item的主题样式
-//    UIBarButtonItem *item = [UIBarButtonItem appearance];
-//    
-//    // 设置普通状态
-//    // key：NS****AttributeName
-//    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-//    textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
-//    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-//    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-//    
-//    [item setTintColor:[UIColor blackColor]];
-//    // 设置不可用状态
-//    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
-//    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
-//    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-//    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    //设置整个项目所有Item的主题样式
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    //设置普通状态
+    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
+    textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
+    //设置不可用状态
+    NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
+    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
+    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
     
 
 }

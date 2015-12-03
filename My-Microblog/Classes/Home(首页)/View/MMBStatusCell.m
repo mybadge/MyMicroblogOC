@@ -13,6 +13,8 @@
 #import "UIImageView+WebCache.h"
 #import "MMBPhoto.h"
 #import "MMBStatusToolbar.h"
+#import "MMBStatusPhotoView.h"
+#import "MMBStatusPhotosView.h"
 
 @interface MMBStatusCell ()
 /** 原创微博 */
@@ -23,7 +25,7 @@
 /** 会员图标 */
 @property (nonatomic,weak) UIImageView *vipView;
 /** 配图 */
-@property (nonatomic,weak) UIImageView *photoView;
+@property (nonatomic,weak) MMBStatusPhotosView *photoView;
 /** 昵称 */
 @property (nonatomic,weak) UILabel *nameLabel;
 /** 时间 */
@@ -40,7 +42,7 @@
 /** 转发微博正文和昵称 */
 @property (nonatomic,weak) UILabel *retweetContentLabel;
 /** 转发配图 */
-@property (nonatomic,weak) UIImageView *retweetPhotoView;
+@property (nonatomic,weak) MMBStatusPhotosView *retweetPhotoView;
 
 /** 工具条 */
 @property (nonatomic, weak) MMBStatusToolbar *toolbar;
@@ -60,9 +62,9 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        self.backgroundColor = [UIColor clearColor];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.backgroundColor = MMBColor(221, 221, 221);
+        //self.backgroundColor = MMBColor(221, 221, 221);
         //原创微博
         [self setupOriginal];
        
@@ -102,7 +104,7 @@
     self.retweetContentLabel = retweetContentLabel;
     
     /** 转发微博配图 */
-    UIImageView *retweetPhotoView = [[UIImageView alloc] init];
+    MMBStatusPhotosView *retweetPhotoView = [[MMBStatusPhotosView alloc] init];
     [retweetView addSubview:retweetPhotoView];
     self.retweetPhotoView = retweetPhotoView;
     
@@ -128,7 +130,7 @@
     self.vipView = vipView;
     
     /** 配图 */
-    UIImageView *photoView = [[UIImageView alloc] init];
+    MMBStatusPhotosView *photoView = [[MMBStatusPhotosView alloc] init];
     [originnalView addSubview:photoView];
     self.photoView = photoView;
     
@@ -189,8 +191,9 @@
     /** 配图 */
     if (status.pic_urls.count) {
         self.photoView.frame = statusFrame.photoViewF;
-        MMBPhoto *photo = [status.pic_urls firstObject];
-        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        //MMBPhoto *photo = [status.pic_urls firstObject];
+        self.photoView.photos = status.pic_urls;
+//        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
         self.photoView.hidden = NO;
     }else{
         self.photoView.hidden = YES;
@@ -222,12 +225,13 @@
         self.retweetView.hidden = NO;
         /** 被转发微博整体 */
         self.retweetView.frame = statusFrame.retweetViewF;
-        self.retweetContentLabel.text = [NSString stringWithFormat:@"%@ : %@", retweeted_status_user.name,retweeted_status.text];
+        self.retweetContentLabel.text = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name,retweeted_status.text];
         self.retweetContentLabel.frame = statusFrame.retweetContentLabelF;
         
         if (retweeted_status.pic_urls.count) {
-            MMBPhoto *photo= [retweeted_status.pic_urls firstObject];
-            [self.retweetPhotoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+            //MMBPhoto *photo= [retweeted_status.pic_urls firstObject];
+            //[self.retweetPhotoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+            self.retweetPhotoView.photos = retweeted_status.pic_urls;
             self.retweetPhotoView.hidden = NO;
             self.retweetPhotoView.frame = statusFrame.retweetPhotoViewF;
         }else{

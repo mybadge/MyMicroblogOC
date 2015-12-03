@@ -34,6 +34,8 @@
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
 		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; };
 		DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */; };
+		DAE09FC11C10174F001B38AF /* MMBStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */; };
+		DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */; };
 		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; };
 		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; };
 		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; };
@@ -116,6 +118,10 @@
 		DAAC89751C09701C0000729C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DAE09FBC1C0F21C8001B38AF /* MMBStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusToolbar.h; sourceTree = "<group>"; };
 		DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusToolbar.m; sourceTree = "<group>"; };
+		DAE09FBF1C10174E001B38AF /* MMBStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusPhotoView.h; sourceTree = "<group>"; };
+		DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusPhotoView.m; sourceTree = "<group>"; };
+		DAE09FC21C10251C001B38AF /* MMBStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusPhotosView.h; sourceTree = "<group>"; };
+		DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusPhotosView.m; sourceTree = "<group>"; };
 		DAEAB4161C0A9649003295DB /* MMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNavigationController.h; sourceTree = "<group>"; };
 		DAEAB4171C0A9649003295DB /* MMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNavigationController.m; sourceTree = "<group>"; };
 		DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -408,6 +414,10 @@
 				DA9046C21C0DF4920066A05D /* MMBStatusCell.m */,
 				DAE09FBC1C0F21C8001B38AF /* MMBStatusToolbar.h */,
 				DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */,
+				DAE09FBF1C10174E001B38AF /* MMBStatusPhotoView.h */,
+				DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */,
+				DAE09FC21C10251C001B38AF /* MMBStatusPhotosView.h */,
+				DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -796,6 +806,7 @@
 			files = (
 				DA8EB9F61C0EF53A000BEE79 /* NSDate+Extension.m in Sources */,
 				DA600B431C0C956A002D05A1 /* MMBNetworkTool.m in Sources */,
+				DAE09FC11C10174F001B38AF /* MMBStatusPhotoView.m in Sources */,
 				DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */,
 				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
 				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
@@ -816,6 +827,7 @@
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
 				DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
+				DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */,
 				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
 				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,
 				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
