@@ -14,6 +14,10 @@
 #import "MMBAccountTool.h"
 #import "UIWindow+Extension.h"
 
+#define MMBApiClient_id @"2492369838"
+#define MMBApiClient_secret @"47731e717d9338fbe53f46518f150eb1"
+#define MMBApiRedirect_uri @"http://www.baidu.com"
+
 
 //#define client_id
 
@@ -36,7 +40,8 @@
      client_id	true	string	申请应用时分配的AppKey。
      redirect_uri	true	string	授权回调地址，站外应用需与设置的回调地址一致，站内应用需填写canvas page的地址。
      */
-    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/oauth2/authorize?client_id=2492369838&redirect_uri=http://www.baidu.com"];
+    NSString *urlStr = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@", MMBApiClient_id, MMBApiRedirect_uri];
+    NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
 }
@@ -75,10 +80,10 @@
     
     // 2.拼接请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"client_id"] = @"2492369838";
-    params[@"client_secret"] = @"47731e717d9338fbe53f46518f150eb1";
+    params[@"client_id"] = MMBApiClient_id;
+    params[@"client_secret"] = MMBApiClient_secret;
     params[@"grant_type"] = @"authorization_code";
-    params[@"redirect_uri"] = @"http://www.baidu.com";
+    params[@"redirect_uri"] = MMBApiRedirect_uri;
     params[@"code"] = code;
     
     // 3.发送请求

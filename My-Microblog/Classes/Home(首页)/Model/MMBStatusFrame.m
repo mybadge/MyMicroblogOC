@@ -40,7 +40,7 @@
     
     /** 原创微博 */
     /** 头像 */
-    CGFloat iconWH = 35;
+    CGFloat iconWH = 50;
     CGFloat iconX = MMBStatusCellBorderW;
     CGFloat iconY = iconX;
     self.iconViewF = CGRectMake(iconX, iconY, iconWH, iconWH);

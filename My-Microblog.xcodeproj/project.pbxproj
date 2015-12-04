@@ -36,6 +36,8 @@
 		DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */; };
 		DAE09FC11C10174F001B38AF /* MMBStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */; };
 		DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */; };
+		DAE09FC71C1179BE001B38AF /* MMBIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC61C1179BE001B38AF /* MMBIconView.m */; };
+		DAE09FCE1C11B50E001B38AF /* MMBComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FCD1C11B50E001B38AF /* MMBComposeViewController.m */; };
 		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; };
 		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; };
 		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; };
@@ -122,6 +124,10 @@
 		DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusPhotoView.m; sourceTree = "<group>"; };
 		DAE09FC21C10251C001B38AF /* MMBStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusPhotosView.h; sourceTree = "<group>"; };
 		DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusPhotosView.m; sourceTree = "<group>"; };
+		DAE09FC51C1179BE001B38AF /* MMBIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBIconView.h; sourceTree = "<group>"; };
+		DAE09FC61C1179BE001B38AF /* MMBIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBIconView.m; sourceTree = "<group>"; };
+		DAE09FCC1C11B50E001B38AF /* MMBComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBComposeViewController.h; sourceTree = "<group>"; };
+		DAE09FCD1C11B50E001B38AF /* MMBComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBComposeViewController.m; sourceTree = "<group>"; };
 		DAEAB4161C0A9649003295DB /* MMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNavigationController.h; sourceTree = "<group>"; };
 		DAEAB4171C0A9649003295DB /* MMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNavigationController.m; sourceTree = "<group>"; };
 		DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 		DAAC89651C09701C0000729C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DAE09FC81C11B4E1001B38AF /* Compose(发微博) */,
 				DA3DAE371C0C329500D31A18 /* OAuth(授权) */,
 				DA3DAE321C0C1FA900D31A18 /* NewFeature */,
 				DAAC896B1C09701C0000729C /* Home(首页) */,
@@ -470,6 +477,8 @@
 				DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */,
 				DA3DAE0A1C0AFF1400D31A18 /* MMBTabBar.h */,
 				DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */,
+				DAE09FC51C1179BE001B38AF /* MMBIconView.h */,
+				DAE09FC61C1179BE001B38AF /* MMBIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -602,6 +611,39 @@
 				DA600B421C0C956A002D05A1 /* MMBNetworkTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		DAE09FC81C11B4E1001B38AF /* Compose(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				DAE09FC91C11B4E1001B38AF /* Controller */,
+				DAE09FCA1C11B4E1001B38AF /* Model */,
+				DAE09FCB1C11B4E1001B38AF /* View */,
+			);
+			path = "Compose(发微博)";
+			sourceTree = "<group>";
+		};
+		DAE09FC91C11B4E1001B38AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAE09FCC1C11B50E001B38AF /* MMBComposeViewController.h */,
+				DAE09FCD1C11B50E001B38AF /* MMBComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAE09FCA1C11B4E1001B38AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAE09FCB1C11B4E1001B38AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DAEAB4191C0A96DC003295DB /* Category */ = {
@@ -812,6 +854,7 @@
 				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
 				DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */,
 				DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */,
+				DAE09FC71C1179BE001B38AF /* MMBIconView.m in Sources */,
 				DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */,
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
 				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
@@ -829,6 +872,7 @@
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */,
 				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
+				DAE09FCE1C11B50E001B38AF /* MMBComposeViewController.m in Sources */,
 				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,
 				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
 				DA9046BB1C0DDF650066A05D /* MMBLoadMoreFooter.m in Sources */,

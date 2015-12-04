@@ -10,8 +10,11 @@
 #import "MMBPhoto.h"
 #import "MMBStatusPhotoView.h"
 
-#define MMBStatusPhotoMargin 4
-#define MMBStatusPhotoWH ([UIScreen mainScreen].bounds.size.width - MMBStatusPhotoMargin * 4) / 3
+/** cell的边框宽度 */
+#define MMBStatusCellBorderW 10
+
+#define MMBStatusPhotoMargin 5
+#define MMBStatusPhotoWH ([UIScreen mainScreen].bounds.size.width - 2*MMBStatusCellBorderW - MMBStatusPhotoMargin * 2) / 3
 #define MMBStatusPhotoMaxCol(count) ((count == 4) ? 2 : 3)
 
 

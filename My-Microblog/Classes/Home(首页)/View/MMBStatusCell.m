@@ -15,13 +15,14 @@
 #import "MMBStatusToolbar.h"
 #import "MMBStatusPhotoView.h"
 #import "MMBStatusPhotosView.h"
+#import "MMBIconView.h"
 
 @interface MMBStatusCell ()
 /** 原创微博 */
 /** 原创微博整体 */
 @property (nonatomic,weak) UIView *originnalView;
 /** 头像 */
-@property (nonatomic,weak) UIImageView *iconView;
+@property (nonatomic,weak) MMBIconView *iconView;
 /** 会员图标 */
 @property (nonatomic,weak) UIImageView *vipView;
 /** 配图 */
@@ -119,7 +120,7 @@
     self.originnalView = originnalView;
     
     /** 头像 */
-    UIImageView *iconView = [[UIImageView alloc] init];
+    MMBIconView *iconView = [[MMBIconView alloc] init];
     [originnalView addSubview:iconView];
     self.iconView = iconView;
     
@@ -171,10 +172,9 @@
     
     /** 头像 */
     self.iconView.frame = statusFrame.iconViewF;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    self.iconView.user = user;
+    //[self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
-    self.iconView.layer.cornerRadius = 12.5;
-    self.iconView.layer.masksToBounds = YES;
     
     /** 会员图标 */
     if (user.isVip) {
@@ -193,7 +193,7 @@
         self.photoView.frame = statusFrame.photoViewF;
         //MMBPhoto *photo = [status.pic_urls firstObject];
         self.photoView.photos = status.pic_urls;
-//        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+        //[self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
         self.photoView.hidden = NO;
     }else{
         self.photoView.hidden = YES;
