@@ -45,7 +45,7 @@
  * 发布微博
  */
 - (void)compose{
-    NSLog(@"%s",__func__);
+    NSLog(@"%s",__func__)  ;
 }
 
 - (void)back{
