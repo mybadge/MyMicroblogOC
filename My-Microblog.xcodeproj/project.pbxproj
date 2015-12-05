@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC389C679C8FC4750B8C394 /* libPods.a */; };
 		DA0903AD1C128CD50091AAB6 /* MMBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0903AC1C128CD50091AAB6 /* MMBTextView.m */; };
+		DA0903B01C12D6030091AAB6 /* MMBComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0903AF1C12D6030091AAB6 /* MMBComposeToolbar.m */; };
+		DA0903B31C12FE360091AAB6 /* MMBComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0903B21C12FE360091AAB6 /* MMBComposePhotosView.m */; };
 		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; };
 		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; };
 		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; };
@@ -71,6 +73,10 @@
 		559A775C20C50223EEE9923A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA0903AB1C128CD50091AAB6 /* MMBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTextView.h; sourceTree = "<group>"; };
 		DA0903AC1C128CD50091AAB6 /* MMBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTextView.m; sourceTree = "<group>"; };
+		DA0903AE1C12D6030091AAB6 /* MMBComposeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBComposeToolbar.h; sourceTree = "<group>"; };
+		DA0903AF1C12D6030091AAB6 /* MMBComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBComposeToolbar.m; sourceTree = "<group>"; };
+		DA0903B11C12FE360091AAB6 /* MMBComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBComposePhotosView.h; sourceTree = "<group>"; };
+		DA0903B21C12FE360091AAB6 /* MMBComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBComposePhotosView.m; sourceTree = "<group>"; };
 		DA3DAE011C0AD63600D31A18 /* MMBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBSearchBar.h; sourceTree = "<group>"; };
 		DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBSearchBar.m; sourceTree = "<group>"; };
 		DA3DAE041C0ADF4900D31A18 /* MMBDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBDropdownMenu.h; sourceTree = "<group>"; };
@@ -647,6 +653,10 @@
 		DAE09FCB1C11B4E1001B38AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA0903AE1C12D6030091AAB6 /* MMBComposeToolbar.h */,
+				DA0903AF1C12D6030091AAB6 /* MMBComposeToolbar.m */,
+				DA0903B11C12FE360091AAB6 /* MMBComposePhotosView.h */,
+				DA0903B21C12FE360091AAB6 /* MMBComposePhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -866,6 +876,8 @@
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */,
 				DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */,
+				DA0903B31C12FE360091AAB6 /* MMBComposePhotosView.m in Sources */,
+				DA0903B01C12D6030091AAB6 /* MMBComposeToolbar.m in Sources */,
 				DAAC89871C09701C0000729C /* AppDelegate.m in Sources */,
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
 				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,

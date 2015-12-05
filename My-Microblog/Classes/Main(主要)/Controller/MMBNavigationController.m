@@ -26,7 +26,7 @@
     //设置不可用状态
     NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionary];
     disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
-    disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    disableTextAttrs[NSFontAttributeName] = textAttrs[NSFontAttributeName];
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
 }
 
