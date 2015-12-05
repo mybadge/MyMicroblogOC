@@ -28,6 +28,8 @@
 // 随机色
 #define MMBRandomColor MMBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+#define MMBNotificationCenter [NSNotificationCenter defaultCenter]
+
 #endif
 
 #endif /* PrefixHeader_pch */

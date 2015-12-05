@@ -13,6 +13,7 @@
 #import "MMBProfileViewController.h"
 #import "MMBNavigationController.h"
 #import "MMBTabBar.h"
+#import "MMBComposeViewController.h"
 
 @interface MMBTabBarController ()<MMBTabBarDelegate>
 
@@ -42,11 +43,12 @@
     [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
-//tabBar的代理方法
+//tabBar的代理方法 点击加号按钮,弹出发微博页面
 - (void)tabBarDidClickPlusButton:(MMBTabBar *)tabBar{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    //[self presentViewController:vc animated:YES completion:nil];
+    MMBComposeViewController *vc = [[MMBComposeViewController alloc] init];
+    MMBNavigationController *nav = [[MMBNavigationController alloc] initWithRootViewController:vc];
+//    vc.view.backgroundColor = [UIColor whiteColor];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 /**

@@ -12,11 +12,7 @@
 @implementation MMBNavigationController
 
 - (void)viewDidLoad{
-    
-    
-    
-//    [self.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor] }];
-
+    [super viewDidLoad];
 }
 
 + (void)initialize{
@@ -32,8 +28,6 @@
     disableTextAttrs[NSForegroundColorAttributeName] = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
     disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
-    
-
 }
 
 

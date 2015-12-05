@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01FCD126C9BAF0DAF8DE539E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC389C679C8FC4750B8C394 /* libPods.a */; };
+		DA0903AD1C128CD50091AAB6 /* MMBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0903AC1C128CD50091AAB6 /* MMBTextView.m */; };
 		DA3DAE031C0AD63600D31A18 /* MMBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */; };
 		DA3DAE061C0ADF4900D31A18 /* MMBDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE051C0ADF4900D31A18 /* MMBDropdownMenu.m */; };
 		DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3DAE081C0AED9A00D31A18 /* MMBTitleMenuViewController.m */; };
@@ -68,6 +69,8 @@
 /* Begin PBXFileReference section */
 		1FC389C679C8FC4750B8C394 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		559A775C20C50223EEE9923A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA0903AB1C128CD50091AAB6 /* MMBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTextView.h; sourceTree = "<group>"; };
+		DA0903AC1C128CD50091AAB6 /* MMBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTextView.m; sourceTree = "<group>"; };
 		DA3DAE011C0AD63600D31A18 /* MMBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBSearchBar.h; sourceTree = "<group>"; };
 		DA3DAE021C0AD63600D31A18 /* MMBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBSearchBar.m; sourceTree = "<group>"; };
 		DA3DAE041C0ADF4900D31A18 /* MMBDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBDropdownMenu.h; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 				DA3DAE0B1C0AFF1400D31A18 /* MMBTabBar.m */,
 				DAE09FC51C1179BE001B38AF /* MMBIconView.h */,
 				DAE09FC61C1179BE001B38AF /* MMBIconView.m */,
+				DA0903AB1C128CD50091AAB6 /* MMBTextView.h */,
+				DA0903AC1C128CD50091AAB6 /* MMBTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
+				DA0903AD1C128CD50091AAB6 /* MMBTextView.m in Sources */,
 				DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */,
