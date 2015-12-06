@@ -49,6 +49,9 @@
 		DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4371C0AA5E0003295DB /* MMBHomeViewController.m */; };
 		DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */; };
 		DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */; };
+		DAFD42651C140AA10015D7D3 /* MMBEmotioinKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */; };
+		DAFD42681C140ACB0015D7D3 /* MMBEmotionTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */; };
+		DAFD426B1C140AF60015D7D3 /* MMBEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +157,12 @@
 		DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBMessageCenterViewController.m; sourceTree = "<group>"; };
 		DAEAB43C1C0AA601003295DB /* MMBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBProfileViewController.h; sourceTree = "<group>"; };
 		DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBProfileViewController.m; sourceTree = "<group>"; };
+		DAFD42631C140AA10015D7D3 /* MMBEmotioinKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotioinKeyBoard.h; sourceTree = "<group>"; };
+		DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotioinKeyBoard.m; sourceTree = "<group>"; };
+		DAFD42661C140ACB0015D7D3 /* MMBEmotionTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionTabbar.h; sourceTree = "<group>"; };
+		DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionTabbar.m; sourceTree = "<group>"; };
+		DAFD42691C140AF60015D7D3 /* MMBEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionListView.h; sourceTree = "<group>"; };
+		DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionListView.m; sourceTree = "<group>"; };
 		EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -657,6 +666,12 @@
 				DA0903AF1C12D6030091AAB6 /* MMBComposeToolbar.m */,
 				DA0903B11C12FE360091AAB6 /* MMBComposePhotosView.h */,
 				DA0903B21C12FE360091AAB6 /* MMBComposePhotosView.m */,
+				DAFD42631C140AA10015D7D3 /* MMBEmotioinKeyBoard.h */,
+				DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */,
+				DAFD42661C140ACB0015D7D3 /* MMBEmotionTabbar.h */,
+				DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */,
+				DAFD42691C140AF60015D7D3 /* MMBEmotionListView.h */,
+				DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -873,6 +888,7 @@
 				DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */,
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
 				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
+				DAFD42681C140ACB0015D7D3 /* MMBEmotionTabbar.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */,
 				DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */,
@@ -889,12 +905,14 @@
 				DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,
 				DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */,
+				DAFD426B1C140AF60015D7D3 /* MMBEmotionListView.m in Sources */,
 				DA600B481C0C9975002D05A1 /* MMBAccount.m in Sources */,
 				DAE09FCE1C11B50E001B38AF /* MMBComposeViewController.m in Sources */,
 				DA9046B21C0D86990066A05D /* MMBTitleButton.m in Sources */,
 				DA3DAE0C1C0AFF1400D31A18 /* MMBTabBar.m in Sources */,
 				DA9046BB1C0DDF650066A05D /* MMBLoadMoreFooter.m in Sources */,
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
+				DAFD42651C140AA10015D7D3 /* MMBEmotioinKeyBoard.m in Sources */,
 				DA3DAE3B1C0C32CC00D31A18 /* MMBOAuthViewController.m in Sources */,
 				DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */,
 			);
