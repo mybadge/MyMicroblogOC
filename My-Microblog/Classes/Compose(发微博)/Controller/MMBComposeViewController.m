@@ -209,15 +209,15 @@
         UIImage *image = [self.photosView.photos firstObject];
         NSData *data = UIImageJPEGRepresentation(image, 0.5);
         [formData appendPartWithFileData:data name:@"pic" fileName:@"test.jpg" mimeType:@"image/jpeg"];
-        
+    
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         [SVProgressHUD showSuccessWithStatus:@"发送成功"];
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"发送失败"];
     }];
 }
-
 - (void)back{
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
