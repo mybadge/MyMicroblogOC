@@ -8,7 +8,28 @@
 
 #import "MMBComposeToolbar.h"
 
+@interface MMBComposeToolbar ()
+
+@property (nonatomic, weak) UIButton *keyBoardButton;
+@end
 @implementation MMBComposeToolbar
+
+- (void)setShowKeyboardButton:(BOOL)showKeyboardButton{
+    _showKeyboardButton = showKeyboardButton;
+    //默认图片名
+    NSString *imageName = @"compose_emoticonbutton_background";
+    NSString *highlightImageName = @"compose_emoticonbutton_background_highlighted";
+    //显示键盘名
+    if (showKeyboardButton) {
+        imageName = @"compose_keyboardbutton_background";
+        highlightImageName = @"compose_keyboardbutton_background_highlighted";
+    }
+    
+    self.keyBoardButton = [self viewWithTag:MMBComposeToolbarButtonTypeEmotion];
+    //设置图片
+    [self.keyBoardButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [self.keyBoardButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateHighlighted];
+}
 
 + (instancetype)toolbar{
     return  [[self alloc] init];
@@ -43,10 +64,11 @@
     [self addSubview:btn];
 }
 
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     CGFloat w = self.width / self.subviews.count;
-   
+    
     for (int i = 0 ; i < self.subviews.count; ++i) {
         UIButton *btn = self.subviews[i];
         btn.x = w * i;

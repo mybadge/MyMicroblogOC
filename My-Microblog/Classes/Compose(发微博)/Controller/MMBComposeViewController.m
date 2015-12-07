@@ -15,14 +15,28 @@
 #import "MBProgressHUD.h"
 #import "SVProgressHUD.h"
 #import "MMBComposePhotosView.h"
+#import "MMBEmotioinKeyBoard.h"
 
 @interface MMBComposeViewController ()<MMBComposeToolbarDelegate,UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, weak) MMBTextView *textView;
 @property (nonatomic, weak) MMBComposeToolbar *toolbar;
 @property (nonatomic, weak) MMBComposePhotosView *photosView;
+@property (nonatomic, strong) MMBEmotioinKeyBoard *emotionKeyBoard;
+/** 是否正在切换键盘 */
+@property (nonatomic, assign) BOOL switchingKeybaord;
 @end
 
 @implementation MMBComposeViewController
+
+- (MMBEmotioinKeyBoard *)emotionKeyBoard{
+    if (!_emotionKeyBoard) {
+        _emotionKeyBoard = [[MMBEmotioinKeyBoard alloc] init];
+        _emotionKeyBoard.width = self.view.width;
+        _emotionKeyBoard.height = 271;
+    }
+    return _emotionKeyBoard;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,16 +151,19 @@
 }
 
 
+#pragma mark - 监听方法
 - (void)textDidChange{
     self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification{
+    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
     //动画持续时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     //键盘的frame
     CGRect keyboardF = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    NSLog(@"%f",keyboardF.size.height);
     //执行动画
     [UIView animateWithDuration:duration animations:^{
         if (keyboardF.origin.y > self.view.height) {
@@ -243,11 +260,30 @@
             NSLog(@"话题%d",MMBComposeToolbarButtonTypeTrend);
             break;
         case MMBComposeToolbarButtonTypeEmotion:
-            NSLog(@"表情 %d",MMBComposeToolbarButtonTypeEmotion);
+            [self switchKeyboard];
             break;
         default:
             break;
     }
+}
+
+- (void)switchKeyboard{
+    self.toolbar.showKeyboardButton = !self.toolbar.isShowKeyboardButton;
+    if (self.textView.inputView == nil) {
+        self.textView.inputView = self.emotionKeyBoard;
+        //显示键盘按钮
+        self.toolbar.showKeyboardButton = YES;
+    }else{
+        self.textView.inputView = nil;
+        //显示表情按钮
+        self.toolbar.showKeyboardButton = NO;
+    }
+    self.switchingKeybaord = YES;
+    [self.textView endEditing:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.textView becomeFirstResponder];
+        self.switchingKeybaord = NO;
+    });
 }
 
 - (void)openCamera{

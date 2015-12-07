@@ -36,7 +36,7 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.tabBar.height = 39;
+    self.tabBar.height = 44;
     self.tabBar.y = self.height - self.tabBar.height;
     self.tabBar.width = self.width;
     self.emojilistView.width = self.width;

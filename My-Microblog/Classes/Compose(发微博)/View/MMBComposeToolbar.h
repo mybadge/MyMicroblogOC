@@ -30,5 +30,8 @@ typedef enum MMBComposeToolbarButtonType{
 
 @interface MMBComposeToolbar : UIView
 @property (nonatomic, weak) id<MMBComposeToolbarDelegate> delegate;
+/** 是否显示键盘按钮 否则显示表情按钮 */
+@property (nonatomic, assign, getter=isShowKeyboardButton) BOOL showKeyboardButton;
 + (instancetype)toolbar;
+
 @end
