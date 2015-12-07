@@ -69,15 +69,12 @@
             [self addSubview: self.recentListView];
             break;
         case MMBEmotionTabBarButtonTypeDefault:
-            NSLog(@"默认");
             [self addSubview:self.defaultListView];
             break;
         case MMBEmotionTabBarButtonTypeEmoji:
-            NSLog(@"Emoji");
             [self addSubview:self.emojiListView];
             break;
         case MMBEmotionTabBarButtonTypeLxh:
-            NSLog(@"浪小花");
             [self addSubview:self.lxhListView];
             break;
         default:
@@ -101,10 +98,8 @@
 - (MMBEmotionListView *)defaultListView{
     if (!_defaultListView) {
         _defaultListView = [[MMBEmotionListView alloc] init];
-        //NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:nil]];
         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/default/info.plist"];
-        _recentListView.emotions = array;
-         NSLog(@"%zd",array.count);
+        self.defaultListView.emotions = array;
     }
     return _defaultListView;
 }
@@ -113,8 +108,7 @@
     if (!_emojiListView) {
         _emojiListView = [[MMBEmotionListView alloc] init];
          NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/emoji/info.plist"];
-        _recentListView.emotions = array;
-        NSLog(@"%zd",array.count);
+        _emojiListView.emotions = array;
     }
     return _emojiListView;
 }
@@ -123,9 +117,8 @@
     if (!_lxhListView) {
         _lxhListView = [[MMBEmotionListView alloc] init];
         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/lxh/info.plist"];
-        _recentListView.emotions = array;
-         NSLog(@"%zd",array.count);
-    }
+        _lxhListView.emotions = array;
+     }
     return _lxhListView;
 }
 

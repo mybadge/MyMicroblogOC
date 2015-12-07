@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//  表情键盘顶部的内容:scrollView + pageControl
 @interface MMBEmotionListView : UIView
 /** 表情数组(里面装的是MMBEmotion模型) */
 @property (nonatomic, strong) NSArray *emotions;

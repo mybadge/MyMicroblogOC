@@ -32,7 +32,7 @@
     if (!_emotionKeyBoard) {
         _emotionKeyBoard = [[MMBEmotioinKeyBoard alloc] init];
         _emotionKeyBoard.width = self.view.width;
-        _emotionKeyBoard.height = 271;
+        _emotionKeyBoard.height = 216;
     }
     return _emotionKeyBoard;
 }
@@ -157,7 +157,7 @@
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification{
-    if (self.switchingKeybaord) return;
+//    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
     //动画持续时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
