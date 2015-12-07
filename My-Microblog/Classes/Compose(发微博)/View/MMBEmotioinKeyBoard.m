@@ -8,11 +8,11 @@
 
 #import "MMBEmotioinKeyBoard.h"
 #import "MMBEmotionListView.h"
-#import "MMBEmotionTabbar.h"
+#import "MMBEmotionTabBar.h"
 
-@interface MMBEmotioinKeyBoard ()
+@interface MMBEmotioinKeyBoard ()<MMBEmotionTabBarDelegate>
 @property (nonatomic, weak) MMBEmotionListView *emojilistView;
-@property (nonatomic, weak) MMBEmotionTabbar *tabBar;
+@property (nonatomic, weak) MMBEmotionTabBar *tabBar;
 @end
 @implementation MMBEmotioinKeyBoard
 
@@ -25,21 +25,41 @@
         [self addSubview:emojilistView];
         self.emojilistView = emojilistView;
         
-        MMBEmotionTabbar *tabBar = [[MMBEmotionTabbar alloc] init];
-        tabBar.backgroundColor = MMBRandomColor;
+        MMBEmotionTabBar *tabBar = [[MMBEmotionTabBar alloc] init];
+        //tabBar.backgroundColor = MMBRandomColor;
+        tabBar.delegate = self;
         [self addSubview:tabBar];
         self.tabBar = tabBar;
-        
     }
     return self;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.tabBar.height = 44;
+    self.tabBar.height = 37;
     self.tabBar.y = self.height - self.tabBar.height;
     self.tabBar.width = self.width;
     self.emojilistView.width = self.width;
     self.emojilistView.height = self.tabBar.y;
 }
+
+- (void)emotionTabBar:(MMBEmotionTabBar *)tabBar didSelectedButtonType:(MMBEmotionTabBarButtonType)buttonType{
+    switch (buttonType) {
+        case MMBEmotionTabBarButtonTypeRecent:
+            NSLog(@"最近");
+            break;
+        case MMBEmotionTabBarButtonTypeDefault:
+            NSLog(@"默认");
+            break;
+        case MMBEmotionTabBarButtonTypeEmoji:
+            NSLog(@"Emoji");
+            break;
+        case MMBEmotionTabBarButtonTypeLxh:
+            NSLog(@"浪小花");
+            break;
+        default:
+            break;
+    }
+}
+
 @end
