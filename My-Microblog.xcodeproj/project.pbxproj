@@ -30,6 +30,8 @@
 		DA9046BD1C0DDF820066A05D /* MMBLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9046BC1C0DDF820066A05D /* MMBLoadMoreFooter.xib */; };
 		DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046BF1C0DF4740066A05D /* MMBStatusFrame.m */; };
 		DA9046C31C0DF4920066A05D /* MMBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9046C21C0DF4920066A05D /* MMBStatusCell.m */; };
+		DA92D3E41C156DCE00D35E3A /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = DA92D3E31C156DCE00D35E3A /* EmotionIcons */; };
+		DA92D3E71C159E1C00D35E3A /* MMBEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = DA92D3E61C159E1C00D35E3A /* MMBEmotion.m */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -50,7 +52,7 @@
 		DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43A1C0AA5F0003295DB /* MMBMessageCenterViewController.m */; };
 		DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */; };
 		DAFD42651C140AA10015D7D3 /* MMBEmotioinKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */; };
-		DAFD42681C140ACB0015D7D3 /* MMBEmotionTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */; };
+		DAFD42681C140ACB0015D7D3 /* MMBEmotionTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD42671C140ACB0015D7D3 /* MMBEmotionTabBar.m */; };
 		DAFD426B1C140AF60015D7D3 /* MMBEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,9 @@
 		DA9046BF1C0DF4740066A05D /* MMBStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusFrame.m; sourceTree = "<group>"; };
 		DA9046C11C0DF4920066A05D /* MMBStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusCell.h; sourceTree = "<group>"; };
 		DA9046C21C0DF4920066A05D /* MMBStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusCell.m; sourceTree = "<group>"; };
+		DA92D3E31C156DCE00D35E3A /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		DA92D3E51C159E1C00D35E3A /* MMBEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotion.h; sourceTree = "<group>"; };
+		DA92D3E61C159E1C00D35E3A /* MMBEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotion.m; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,8 +164,8 @@
 		DAEAB43D1C0AA601003295DB /* MMBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBProfileViewController.m; sourceTree = "<group>"; };
 		DAFD42631C140AA10015D7D3 /* MMBEmotioinKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotioinKeyBoard.h; sourceTree = "<group>"; };
 		DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotioinKeyBoard.m; sourceTree = "<group>"; };
-		DAFD42661C140ACB0015D7D3 /* MMBEmotionTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionTabbar.h; sourceTree = "<group>"; };
-		DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionTabbar.m; sourceTree = "<group>"; };
+		DAFD42661C140ACB0015D7D3 /* MMBEmotionTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionTabBar.h; sourceTree = "<group>"; };
+		DAFD42671C140ACB0015D7D3 /* MMBEmotionTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionTabBar.m; sourceTree = "<group>"; };
 		DAFD42691C140AF60015D7D3 /* MMBEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionListView.h; sourceTree = "<group>"; };
 		DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionListView.m; sourceTree = "<group>"; };
 		EA382D0E375C5EB7753F1602 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +303,7 @@
 		DAAC890D1C094F5E0000729C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA92D3E31C156DCE00D35E3A /* EmotionIcons */,
 				DAAC89191C094F5E0000729C /* Assets.xcassets */,
 				DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */,
 				DAAC891E1C094F5E0000729C /* Info.plist */,
@@ -655,6 +661,8 @@
 		DAE09FCA1C11B4E1001B38AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA92D3E51C159E1C00D35E3A /* MMBEmotion.h */,
+				DA92D3E61C159E1C00D35E3A /* MMBEmotion.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -668,8 +676,8 @@
 				DA0903B21C12FE360091AAB6 /* MMBComposePhotosView.m */,
 				DAFD42631C140AA10015D7D3 /* MMBEmotioinKeyBoard.h */,
 				DAFD42641C140AA10015D7D3 /* MMBEmotioinKeyBoard.m */,
-				DAFD42661C140ACB0015D7D3 /* MMBEmotionTabbar.h */,
-				DAFD42671C140ACB0015D7D3 /* MMBEmotionTabbar.m */,
+				DAFD42661C140ACB0015D7D3 /* MMBEmotionTabBar.h */,
+				DAFD42671C140ACB0015D7D3 /* MMBEmotionTabBar.m */,
 				DAFD42691C140AF60015D7D3 /* MMBEmotionListView.h */,
 				DAFD426A1C140AF60015D7D3 /* MMBEmotionListView.m */,
 			);
@@ -804,6 +812,7 @@
 				DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */,
 				DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */,
 				DA9046BD1C0DDF820066A05D /* MMBLoadMoreFooter.xib in Resources */,
+				DA92D3E41C156DCE00D35E3A /* EmotionIcons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +897,7 @@
 				DA8EB9F31C0EB83E000BEE79 /* MMBPhoto.m in Sources */,
 				DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */,
 				DA3DAE361C0C1FDB00D31A18 /* MMBNewFeatureViewController.m in Sources */,
-				DAFD42681C140ACB0015D7D3 /* MMBEmotionTabbar.m in Sources */,
+				DAFD42681C140ACB0015D7D3 /* MMBEmotionTabBar.m in Sources */,
 				DAEAB4351C0AA5D6003295DB /* MMBDiscoverViewController.m in Sources */,
 				DA9046B51C0DB8EC0066A05D /* MMBUser.m in Sources */,
 				DA9046C01C0DF4740066A05D /* MMBStatusFrame.m in Sources */,
@@ -898,6 +907,7 @@
 				DAEAB4321C0AA589003295DB /* MMBTabBarController.m in Sources */,
 				DAEAB43B1C0AA5F0003295DB /* MMBMessageCenterViewController.m in Sources */,
 				DA9046C31C0DF4920066A05D /* MMBStatusCell.m in Sources */,
+				DA92D3E71C159E1C00D35E3A /* MMBEmotion.m in Sources */,
 				DAEAB43E1C0AA601003295DB /* MMBProfileViewController.m in Sources */,
 				DA3DAE091C0AED9A00D31A18 /* MMBTitleMenuViewController.m in Sources */,
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,

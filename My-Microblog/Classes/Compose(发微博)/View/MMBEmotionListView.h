@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MMBEmotionListView : UIView
-
+/** 表情数组(里面装的是MMBEmotion模型) */
+@property (nonatomic, strong) NSArray *emotions;
 @end

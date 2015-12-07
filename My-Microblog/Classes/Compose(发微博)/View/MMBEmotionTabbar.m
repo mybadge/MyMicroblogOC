@@ -63,7 +63,7 @@
     btn.tag = buttonType;
     [btn setTitle:title forState:UIControlStateNormal];
     [self addSubview:btn];
-     //设置背景图片
+    //设置背景图片
     NSString *imageName = @"compose_emotion_table_mid_normal";
     NSString *selectImageName = @"compose_emotion_table_mid_selected";
     if (MMBEmotionTabBarButtonTypeRecent ==buttonType){
@@ -73,8 +73,9 @@
         imageName = @"compose_emotion_table_right_normal";
         selectImageName = @"compose_emotion_table_right_selected";
     }
-
+    
     UIImage *image = [UIImage imageNamed:imageName];
+    //切图,横切和竖切
     image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
     
     UIImage *selectImage = [UIImage imageNamed:selectImageName];
@@ -83,7 +84,7 @@
     
     [btn setBackgroundImage:image forState:UIControlStateNormal];
     [btn setBackgroundImage:selectImage forState:UIControlStateDisabled];
-
+    
 }
 
 - (void)btnClick:(MMBEmotionTabBarButton *)sender{
@@ -98,7 +99,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     CGFloat btnW = self.width / self.subviews.count;
-   
+    
     for (int i = 0 ; i < self.subviews.count; ++i) {
         MMBEmotionTabBarButton *btn = self.subviews[i];
         btn.y = 0;

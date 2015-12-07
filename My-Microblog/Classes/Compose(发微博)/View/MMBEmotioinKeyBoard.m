@@ -9,9 +9,22 @@
 #import "MMBEmotioinKeyBoard.h"
 #import "MMBEmotionListView.h"
 #import "MMBEmotionTabBar.h"
+#import "MMBEmotion.h"
+#import "MJExtension.h"
+
 
 @interface MMBEmotioinKeyBoard ()<MMBEmotionTabBarDelegate>
-@property (nonatomic, weak) MMBEmotionListView *emojilistView;
+
+/** 保存正在显示的listView */
+@property (nonatomic, weak) MMBEmotionListView *showingListView;
+
+/** 表情内容 */
+@property (nonatomic, strong) MMBEmotionListView *recentListView;
+@property (nonatomic, strong) MMBEmotionListView *defaultListView;
+@property (nonatomic, strong) MMBEmotionListView *emojiListView;
+@property (nonatomic, strong) MMBEmotionListView *lxhListView;
+
+/** tabBar */
 @property (nonatomic, weak) MMBEmotionTabBar *tabBar;
 @end
 @implementation MMBEmotioinKeyBoard
@@ -20,10 +33,11 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        MMBEmotionListView *emojilistView = [[MMBEmotionListView alloc] init];
-        emojilistView.backgroundColor = MMBRandomColor;
-        [self addSubview:emojilistView];
-        self.emojilistView = emojilistView;
+        //这里不用创建showingListView, 在调用tabBar按钮的点击事件时,就会调用初始化方法,并设置frame
+        //MMBEmotionListView *showingListView = [[MMBEmotionListView alloc] init];
+        //showingListView.backgroundColor = MMBRandomColor;
+        //[self addSubview:showingListView];
+        //self.emojiListView = showingListView;
         
         MMBEmotionTabBar *tabBar = [[MMBEmotionTabBar alloc] init];
         //tabBar.backgroundColor = MMBRandomColor;
@@ -34,32 +48,87 @@
     return self;
 }
 
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.tabBar.height = 37;
     self.tabBar.y = self.height - self.tabBar.height;
     self.tabBar.width = self.width;
-    self.emojilistView.width = self.width;
-    self.emojilistView.height = self.tabBar.y;
+    
+    self.showingListView.width = self.width;
+    self.showingListView.height = self.tabBar.y;
 }
 
+#pragma mark -MMBEmotionTabBar代理方法
+/** 这里 把键盘视图添加给showingListView,并设置frame以供显示 */
 - (void)emotionTabBar:(MMBEmotionTabBar *)tabBar didSelectedButtonType:(MMBEmotionTabBarButtonType)buttonType{
+    //移除上一词的表情图片.
+    [self.showingListView removeFromSuperview];
     switch (buttonType) {
         case MMBEmotionTabBarButtonTypeRecent:
-            NSLog(@"最近");
+            [self addSubview: self.recentListView];
             break;
         case MMBEmotionTabBarButtonTypeDefault:
             NSLog(@"默认");
+            [self addSubview:self.defaultListView];
             break;
         case MMBEmotionTabBarButtonTypeEmoji:
             NSLog(@"Emoji");
+            [self addSubview:self.emojiListView];
             break;
         case MMBEmotionTabBarButtonTypeLxh:
             NSLog(@"浪小花");
+            [self addSubview:self.lxhListView];
             break;
         default:
             break;
     }
+    //设置正在显示的listView
+    self.showingListView = [self.subviews lastObject];
+    //设置listView的frame, 被动调用 layoutSubViews方法
+    [self setNeedsLayout];
 }
+
+#pragma mark - 懒加载
+- (MMBEmotionListView *)recentListView{
+    if (!_recentListView) {
+        _recentListView = [[MMBEmotionListView alloc] init];
+       //这里 waiting ...
+    }
+    return _recentListView;
+}
+
+- (MMBEmotionListView *)defaultListView{
+    if (!_defaultListView) {
+        _defaultListView = [[MMBEmotionListView alloc] init];
+        //NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmotionIcons/default/info.plist" ofType:nil]];
+        NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/default/info.plist"];
+        _recentListView.emotions = array;
+         NSLog(@"%zd",array.count);
+    }
+    return _defaultListView;
+}
+
+- (MMBEmotionListView *)emojiListView{
+    if (!_emojiListView) {
+        _emojiListView = [[MMBEmotionListView alloc] init];
+         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/emoji/info.plist"];
+        _recentListView.emotions = array;
+        NSLog(@"%zd",array.count);
+    }
+    return _emojiListView;
+}
+
+- (MMBEmotionListView *)lxhListView{
+    if (!_lxhListView) {
+        _lxhListView = [[MMBEmotionListView alloc] init];
+        NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/lxh/info.plist"];
+        _recentListView.emotions = array;
+         NSLog(@"%zd",array.count);
+    }
+    return _lxhListView;
+}
+
+
 
 @end
