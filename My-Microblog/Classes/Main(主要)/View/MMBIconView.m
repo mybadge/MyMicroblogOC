@@ -45,10 +45,9 @@
 - (void)setUser:(MMBUser *)user
 {
     _user = user;
-    if (user.verified_type != MMBUserVerifiedTypeNone) {
-        NSLog(@"name = %@ type = %d  %p",user.name ,user.verified_type,self.verifiedView);
-        
-    }
+    //if (user.verified_type != MMBUserVerifiedTypeNone) {
+    //    NSLog(@"name = %@ type = %d  %p",user.name ,user.verified_type,self.verifiedView);
+    //}
     
     // 1.下载图片
     [self.userIconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];

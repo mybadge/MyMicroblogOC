@@ -9,41 +9,31 @@
 #import "MMBEmotionPageView.h"
 #import "MMBEmotion.h"
 #import "NSString+Emoji.h"
+#import "MMBEmotionButton.h"
+#import "MMBEmotionPopView.h"
 
+@interface MMBEmotionPageView ()
+
+@property (nonatomic, weak) MMBEmotionPopView *popView;
+@end
 @implementation MMBEmotionPageView
 
 - (void)setEmotions:(NSArray *)emotions{
     _emotions = emotions;
     NSInteger count = emotions.count;
     for (int i = 0 ; i < count; ++i) {
-        UIButton *btn = [[UIButton alloc] init];
+        MMBEmotionButton *btn = [[MMBEmotionButton alloc] init];
+        //btn.backgroundColor = MMBRandomColor;
         MMBEmotion *emotion = emotions[i];
-        if (emotion.png) {//有图片
-            [btn setImage:[UIImage imageNamed:emotion.png] forState:UIControlStateNormal];
-        }else if (emotion.code) {
-            [btn setTitle:emotion.code.emoji forState:UIControlStateNormal];
-            btn.titleLabel.font = [UIFont systemFontOfSize:32];
-        }
+        btn.emotion = emotion;
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self addSubview:btn];
     }
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-//    //内边距 (四周)
-//    CGFloat inset = 20;
-//    NSUInteger count = self.subviews.count;
-//    CGFloat btnW = (self.width - 2 * inset) / MMBEmotionMaxCols;
-//    CGFloat btnH = (self.height - 2 * inset) / MMBEmotionMaxRows;
-//    for (int i = 0 ; i < count; ++i) {
-//        UIButton *btn = self.subviews[i];
-//        btn.width = btnW;
-//        btn.height = btnH;
-//        int col = i % MMBEmotionMaxCols;
-//        btn.x = inset + col * btnW;
-//        int row = i / MMBEmotionMaxCols;
-//        btn.y = inset + row * btnH;
-//    }
     // 内边距(四周)
     CGFloat inset = 20;
     NSUInteger count = self.emotions.count;
@@ -58,5 +48,31 @@
     }
 
 }
+
+- (void)btnClick:(MMBEmotionButton *)sender{
+    self.popView.emotion = sender.emotion;
+    //添加放大镜按钮
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    CGRect newFrame = [sender convertRect:sender.bounds toView:nil];
+    self.popView.y = CGRectGetMidY(newFrame) - self.popView.height;
+    self.popView.centerX = CGRectGetMidX(newFrame);
+    
+    [window addSubview:self.popView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.popView removeFromSuperview];
+    });
+    //发出通知
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    userInfo[MMBSelectEmotionKey] = sender.emotion;
+    [MMBNotificationCenter postNotificationName:MMBEmotionDidSelectedNotification object:sender userInfo:userInfo];
+}
+
+- (MMBEmotionPopView *)popView{
+    if (!_popView) {
+        _popView = [MMBEmotionPopView popView];
+    }
+    return _popView;
+}
+
 
 @end

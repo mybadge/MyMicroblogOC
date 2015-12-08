@@ -96,7 +96,7 @@
     //NSLog(@"%zd  length = %zd",range.location, range.length);
      //    range.length = [source rangeOfString:@"<" options:NSBackwardsSearch];
     if (range.length == -1) {
-        NSLog(@"%@",source);
+        //NSLog(@"%@",source);
         _source = @"来自火星";
     }else{
         //NSLog(@"%@",source);

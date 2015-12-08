@@ -163,7 +163,7 @@
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     //键盘的frame
     CGRect keyboardF = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSLog(@"%f",keyboardF.size.height);
+    //NSLog(@"%f",keyboardF.size.height);
     //执行动画
     [UIView animateWithDuration:duration animations:^{
         if (keyboardF.origin.y > self.view.height) {
