@@ -7,6 +7,7 @@
 //
 
 #import "MMBEmotion.h"
+#import "NSObject+MJCoding.h"
 
 @implementation MMBEmotion
 

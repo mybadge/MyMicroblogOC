@@ -16,4 +16,8 @@
 - (void)insertEmotion:(MMBEmotion *)emotion;
 
 
+/**
+ *  UITextView的富文本字符串
+ */
+- (NSString *)fullText;
 @end

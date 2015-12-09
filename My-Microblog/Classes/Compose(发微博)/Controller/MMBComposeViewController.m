@@ -29,6 +29,7 @@
 
 @implementation MMBComposeViewController
 
+#pragma mark - 懒加载
 - (MMBEmotioinKeyBoard *)emotionKeyBoard{
     if (!_emotionKeyBoard) {
         _emotionKeyBoard = [[MMBEmotioinKeyBoard alloc] init];
@@ -38,7 +39,7 @@
     return _emotionKeyBoard;
 }
 
-
+#pragma mark - 系统方法
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -54,6 +55,10 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.textView becomeFirstResponder];
+}
+
+- (void)dealloc{
+    [MMBNotificationCenter removeObserver:self];
 }
 
 #pragma mark - 初始化导航栏
@@ -125,11 +130,10 @@
     
     //监听插入表情的通知
     [MMBNotificationCenter addObserver:self selector:@selector(emotionDidSelected:) name:MMBEmotionDidSelectedNotification object:nil];
+    //监听删除表情通知
+    [MMBNotificationCenter addObserver:self selector:@selector(emotionDidDeleted) name:MMBEmotionDidDeletedNotification object:nil];
 }
 
-- (void)dealloc{
-    [MMBNotificationCenter removeObserver:self];
-}
 
 /**
  * 初始化工具栏
@@ -161,13 +165,25 @@
 
 #pragma mark - 监听方法
 
+/**
+ *  删除表情按钮
+ */
+- (void)emotionDidDeleted{
+    [self.textView deleteBackward];
+}
 
+/**
+ *  插入表情
+ */
 - (void)emotionDidSelected:(NSNotification *)notification{
     MMBEmotion *emotion = notification.userInfo[MMBSelectEmotionKey];
     [self.textView insertEmotion:emotion];
 }
 
 - (void)textDidChange{
+    //NSLog(@"textView=========%@",self.textView.attributedText);
+    NSLog(@"textView.fullText=========%@",self.textView.fullText);
+    
     self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
@@ -182,6 +198,7 @@
     //NSLog(@"%f",keyboardF.size.height);
     //执行动画
     [UIView animateWithDuration:duration animations:^{
+        // 工具条的Y值 == 键盘的Y值 - 工具条的高度
         if (keyboardF.origin.y > self.view.height) {
             self.toolbar.y = self.view.height - self.toolbar.height;
         }else{
@@ -190,6 +207,35 @@
     }];
 }
 
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+/**
+ *  选择键盘
+ */
+- (void)switchKeyboard{
+    self.toolbar.showKeyboardButton = !self.toolbar.isShowKeyboardButton;
+    if (self.textView.inputView == nil) {
+        self.textView.inputView = self.emotionKeyBoard;
+        //显示键盘按钮
+        self.toolbar.showKeyboardButton = YES;
+    }else{
+        self.textView.inputView = nil;
+        //显示表情按钮
+        self.toolbar.showKeyboardButton = NO;
+    }
+    self.switchingKeybaord = YES;
+    [self.textView endEditing:YES];
+    self.switchingKeybaord = NO;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.textView becomeFirstResponder];
+        
+    });
+}
+
+#pragma mark -发送微博
 /**
  * 发布微博
  */
@@ -249,10 +295,7 @@
         [SVProgressHUD showErrorWithStatus:@"发送失败"];
     }];
 }
-- (void)back{
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 #pragma mark - textView(scrollView)的 滚动代理方法
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -283,26 +326,7 @@
     }
 }
 
-- (void)switchKeyboard{
-    self.toolbar.showKeyboardButton = !self.toolbar.isShowKeyboardButton;
-    if (self.textView.inputView == nil) {
-        self.textView.inputView = self.emotionKeyBoard;
-        //显示键盘按钮
-        self.toolbar.showKeyboardButton = YES;
-    }else{
-        self.textView.inputView = nil;
-        //显示表情按钮
-        self.toolbar.showKeyboardButton = NO;
-    }
-    self.switchingKeybaord = YES;
-    [self.textView endEditing:YES];
-     self.switchingKeybaord = NO;
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.textView becomeFirstResponder];
-       
-    });
-}
+
 
 - (void)openCamera{
     [self openImagePickerController:UIImagePickerControllerSourceTypeCamera];

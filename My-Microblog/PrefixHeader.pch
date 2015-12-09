@@ -34,7 +34,7 @@
 
 #define MMBSelectEmotionKey @"MMBSelectEmotionKey"
 #define MMBEmotionDidSelectedNotification @"MMBEmotionDidSelectedNotification"
-
+#define MMBEmotionDidDeletedNotification @"MMBEmotionDidDeletedNotification"
 
 #endif
 

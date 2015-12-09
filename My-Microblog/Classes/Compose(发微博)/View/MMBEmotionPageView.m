@@ -13,7 +13,7 @@
 #import "MMBEmotionPopView.h"
 
 @interface MMBEmotionPageView ()
-
+@property (nonatomic, weak) UIButton *deleteButton;
 @property (nonatomic, weak) MMBEmotionPopView *popView;
 @end
 @implementation MMBEmotionPageView
@@ -46,7 +46,10 @@
         btn.x = inset + (i%MMBEmotionMaxCols) * btnW;
         btn.y = inset + (i/MMBEmotionMaxCols) * btnH;
     }
-
+    self.deleteButton.width = btnW;
+    self.deleteButton.height = btnH;
+    self.deleteButton.x = self.width - inset - btnW;
+    self.deleteButton.y = self.height - btnH;
 }
 
 - (void)btnClick:(MMBEmotionButton *)sender{
@@ -72,6 +75,23 @@
         _popView = [MMBEmotionPopView popView];
     }
     return _popView;
+}
+
+- (UIButton *)deleteButton{
+    if (!_deleteButton) {
+        UIButton *deleteButton = [[UIButton alloc] init];
+        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete"] forState:UIControlStateNormal];
+        [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete_highlighted"] forState:UIControlStateHighlighted];
+        [deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:deleteButton];
+        _deleteButton = deleteButton;
+    }
+    return _deleteButton;
+}
+
+- (void)deleteButtonClick{
+    //NSLog(@"%s",__func__);
+    [MMBNotificationCenter postNotificationName:MMBEmotionDidDeletedNotification object:nil];
 }
 
 
