@@ -9,6 +9,10 @@
 #import "UITextView+Extention.h"
 @implementation UITextView (Extention)
 - (void)insertAttrbuteString:(NSAttributedString *)text{
+    //拼接文本框内所有的字符串, 否则会报错
+    //reason: 'NSMutableRLEArray insertObject:range:: Out of bounds'
+    //NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    //加载图片
     //拼接之前的文字和图片
     NSMutableAttributedString *attrbutedString = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
     

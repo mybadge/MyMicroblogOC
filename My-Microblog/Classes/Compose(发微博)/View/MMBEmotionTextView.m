@@ -36,28 +36,13 @@
         
         //根据附件创建一个文字属性
         NSAttributedString *imageStr = [NSAttributedString attributedStringWithAttachment:attch];
-        //NSUInteger loc = self.selectedRange.location;
-        //拼接附件
         
         
-        //[attributedText replaceCharactersInRange:self.selectedRange withAttributedString:imageStr];
-        
-        //[attributedText insertAttributedString:imageStr.copy atIndex:loc];
-        
-//        [attributedText addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, attributedText.length)];
-//        self.attributedText = attributedText;
-//        self.selectedRange = NSMakeRange(loc+1, 0);
-        
-        ////插入属性到光标位置
-        //[self insertAttrbuteString:imageStr];
+        //插入属性到光标位置 插入表情本来就是TextView的功能,所有就写了个分类,他的功能和系统的插入文字是类似的,只不过这里插入的是表情,设置文字大小属性,需要用户自己来决定,而且想只写一次设置插入表情功能,所以就写了一个block
         [self insertAttrbuteString:imageStr settingBlock:^(NSMutableAttributedString *text) {
+            //设置字体, 封装到了UItextView分类中
             [text addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, text.length)];
         }];
-        
-        //设置字体
-        //NSMutableAttributedString *text = (NSMutableAttributedString *)self.attributedText;
-                //[text addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, text.length)];
-        
     }
 }
 
