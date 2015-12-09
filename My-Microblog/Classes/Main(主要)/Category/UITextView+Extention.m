@@ -9,14 +9,39 @@
 #import "UITextView+Extention.h"
 @implementation UITextView (Extention)
 - (void)insertAttrbuteString:(NSAttributedString *)text{
-    NSMutableAttributedString *attrbutedString = [[NSMutableAttributedString alloc] init];
     //拼接之前的文字和图片
-    [attrbutedString appendAttributedString:self.attributedText];
+    NSMutableAttributedString *attrbutedString = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    
+    //[attrbutedString appendAttributedString:self.attributedText];
     
     //插入图片
     NSUInteger loc = self.selectedRange.location;
-    [attrbutedString insertAttributedString:text atIndex:loc];
+    //[attrbutedString insertAttributedString:text atIndex:loc];
+    [attrbutedString replaceCharactersInRange:self.selectedRange withAttributedString:text];
     self.attributedText = attrbutedString;
+    
+
+    
+    //移动光标到表情的后面
+    self.selectedRange = NSMakeRange(loc + 1, 0);
+}
+
+- (void)insertAttrbuteString:(NSAttributedString *)text settingBlock:(void (^)(NSMutableAttributedString *))settingBlock{
+    //拼接之前的文字和图片
+    NSMutableAttributedString *attrbutedString = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedText];
+    
+    //[attrbutedString appendAttributedString:self.attributedText];
+    
+    //插入图片
+    NSUInteger loc = self.selectedRange.location;
+    //[attrbutedString insertAttributedString:text atIndex:loc];
+    [attrbutedString replaceCharactersInRange:self.selectedRange withAttributedString:text];
+    if (settingBlock) {
+        settingBlock(attrbutedString);
+    }
+    self.attributedText = attrbutedString;
+    
+    
     
     //移动光标到表情的后面
     self.selectedRange = NSMakeRange(loc + 1, 0);

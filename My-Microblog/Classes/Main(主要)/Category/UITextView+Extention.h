@@ -13,4 +13,10 @@
  *  拼接表情
  */
 - (void)insertAttrbuteString:(NSAttributedString *)text;
+
+/**
+ *  拼接表情 还可以设置属性
+ */
+
+- (void)insertAttrbuteString:(NSAttributedString *)text settingBlock:(void (^)(NSMutableAttributedString *))settingBlock;
 @end
