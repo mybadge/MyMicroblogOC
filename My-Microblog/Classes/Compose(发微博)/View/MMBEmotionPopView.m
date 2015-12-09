@@ -19,8 +19,10 @@
 
 -  (void)setEmotion:(MMBEmotion *)emotion{
     _emotion = emotion;
+    
     self.emotionButton.emotion = emotion;
 }
+
 
 + (instancetype)popView{
     return [[[NSBundle mainBundle] loadNibNamed:@"MMBEmotionPopView" owner:nil options:nil] lastObject];

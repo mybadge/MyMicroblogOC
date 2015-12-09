@@ -9,16 +9,17 @@
 #import "MMBComposeViewController.h"
 #import "MMBAccountTool.h"
 #import "MMBAccount.h"
-#import "MMBTextView.h"
 #import "MMBComposeToolbar.h"
 #import "MMBNetworkTool.h"
 #import "MBProgressHUD.h"
 #import "SVProgressHUD.h"
 #import "MMBComposePhotosView.h"
 #import "MMBEmotioinKeyBoard.h"
+#import "MMBEmotion.h"
+#import "MMBEmotionTextView.h"
 
 @interface MMBComposeViewController ()<MMBComposeToolbarDelegate,UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-@property (nonatomic, weak) MMBTextView *textView;
+@property (nonatomic, weak) MMBEmotionTextView *textView;
 @property (nonatomic, weak) MMBComposeToolbar *toolbar;
 @property (nonatomic, weak) MMBComposePhotosView *photosView;
 @property (nonatomic, strong) MMBEmotioinKeyBoard *emotionKeyBoard;
@@ -96,13 +97,13 @@
  */
 - (void)setupTextView{
     // 在这个控制器中，textView的contentInset.top默认会等于64
-    MMBTextView *textView = [[MMBTextView alloc] init];
+    MMBEmotionTextView *textView = [[MMBEmotionTextView alloc] init];
     // 垂直方向上永远可以拖拽（有弹簧效果）
     textView.alwaysBounceVertical = YES;
     textView.frame = self.view.bounds;
     textView.font = [UIFont systemFontOfSize:15];
-    textView.placeholderColor = [UIColor orangeColor];
-    textView.placeholder = @"分享一下你的新鲜事...";
+//    textView.placeholderColor = [UIColor orangeColor];
+//    textView.placeholder = @"分享一下你的新鲜事...";
     [self.view addSubview:textView];
     self.textView = textView;
     self.textView.delegate = self;
@@ -121,6 +122,13 @@
     //    UIKeyboardWillHideNotification
     //    UIKeyboardDidHideNotification
     [MMBNotificationCenter addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    //监听插入表情的通知
+    [MMBNotificationCenter addObserver:self selector:@selector(emotionDidSelected:) name:MMBEmotionDidSelectedNotification object:nil];
+}
+
+- (void)dealloc{
+    [MMBNotificationCenter removeObserver:self];
 }
 
 /**
@@ -152,12 +160,20 @@
 
 
 #pragma mark - 监听方法
+
+
+- (void)emotionDidSelected:(NSNotification *)notification{
+    MMBEmotion *emotion = notification.userInfo[MMBSelectEmotionKey];
+    [self.textView insertEmotion:emotion];
+}
+
 - (void)textDidChange{
     self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
+
 - (void)keyboardWillChangeFrame:(NSNotification *)notification{
-//    if (self.switchingKeybaord) return;
+    if (self.switchingKeybaord) return;
     NSDictionary *userInfo = notification.userInfo;
     //动画持续时间
     double duration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -244,7 +260,7 @@
 }
 
 #pragma mark - MMBComposeToolbar 代理方法
-- (void)composeToolbar:(MMBComposeToolbar *)composeToolbar didClickButton:(NSUInteger)buttonType{
+- (void)composeToolbar:(MMBComposeToolbar *)composeToolbar didClickButton:(NSUInteger)buttonType{               
     switch (buttonType) {
         case MMBComposeToolbarButtonTypeCamera:
             [self openCamera];
@@ -280,9 +296,11 @@
     }
     self.switchingKeybaord = YES;
     [self.textView endEditing:YES];
+     self.switchingKeybaord = NO;
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.textView becomeFirstResponder];
-        self.switchingKeybaord = NO;
+       
     });
 }
 
