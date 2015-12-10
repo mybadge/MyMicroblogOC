@@ -64,7 +64,8 @@
         pageView.emotions = [emotions subarrayWithRange:range];
         [self.scrollView addSubview:pageView];
     }
-    
+    //解决了有时scrollView 不滚动的问题
+    [self setNeedsLayout];
 }
 
 - (void)layoutSubviews{
@@ -87,6 +88,7 @@
         pageView.x = pageView.width * i;
     }
     self.scrollView.contentSize = CGSizeMake(self.width * count, 0);
+    //NSLog(@"%zd",self.scrollView.contentSize.width);
 }
 
 

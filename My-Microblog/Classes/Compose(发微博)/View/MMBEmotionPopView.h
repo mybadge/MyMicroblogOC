@@ -13,4 +13,9 @@
 @property (nonatomic, strong) MMBEmotion *emotion;
 
 + (instancetype)popView;
+
+/**
+ *  添加显示层
+ */
+- (void)showFrom:(UIButton *)btn;
 @end

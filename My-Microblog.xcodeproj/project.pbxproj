@@ -52,6 +52,7 @@
 		DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */; };
 		DAE09FC71C1179BE001B38AF /* MMBIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC61C1179BE001B38AF /* MMBIconView.m */; };
 		DAE09FCE1C11B50E001B38AF /* MMBComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FCD1C11B50E001B38AF /* MMBComposeViewController.m */; };
+		DAE825561C18512100BAAD8E /* MMBTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE825551C18512100BAAD8E /* MMBTextAttachment.m */; };
 		DAEAB4181C0A9649003295DB /* MMBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4171C0A9649003295DB /* MMBNavigationController.m */; };
 		DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB4271C0A9EC6003295DB /* UIBarButtonItem+Extension.m */; };
 		DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEAB42D1C0AA133003295DB /* UIView+Extension.m */; };
@@ -170,6 +171,8 @@
 		DAE09FC61C1179BE001B38AF /* MMBIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBIconView.m; sourceTree = "<group>"; };
 		DAE09FCC1C11B50E001B38AF /* MMBComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBComposeViewController.h; sourceTree = "<group>"; };
 		DAE09FCD1C11B50E001B38AF /* MMBComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBComposeViewController.m; sourceTree = "<group>"; };
+		DAE825541C18512100BAAD8E /* MMBTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBTextAttachment.h; sourceTree = "<group>"; };
+		DAE825551C18512100BAAD8E /* MMBTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBTextAttachment.m; sourceTree = "<group>"; };
 		DAEAB4161C0A9649003295DB /* MMBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBNavigationController.h; sourceTree = "<group>"; };
 		DAEAB4171C0A9649003295DB /* MMBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBNavigationController.m; sourceTree = "<group>"; };
 		DAEAB4261C0A9EC6003295DB /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 			children = (
 				DA92D3E51C159E1C00D35E3A /* MMBEmotion.h */,
 				DA92D3E61C159E1C00D35E3A /* MMBEmotion.m */,
+				DAE825541C18512100BAAD8E /* MMBTextAttachment.h */,
+				DAE825551C18512100BAAD8E /* MMBTextAttachment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -960,6 +965,7 @@
 				DA92D3F21C15C65D00D35E3A /* NSString+Extension.m in Sources */,
 				DA600B4C1C0C9CAE002D05A1 /* MMBAccountTool.m in Sources */,
 				DA0903AD1C128CD50091AAB6 /* MMBTextView.m in Sources */,
+				DAE825561C18512100BAAD8E /* MMBTextAttachment.m in Sources */,
 				DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */,
 				DA92D3EC1C15C64E00D35E3A /* Foundation+Log.m in Sources */,
 				DAEAB4381C0AA5E0003295DB /* MMBHomeViewController.m in Sources */,

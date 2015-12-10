@@ -106,7 +106,7 @@
     // 垂直方向上永远可以拖拽（有弹簧效果）
     textView.alwaysBounceVertical = YES;
     textView.frame = self.view.bounds;
-    textView.font = [UIFont systemFontOfSize:15];
+    textView.font = [UIFont systemFontOfSize:23];
 //    textView.placeholderColor = [UIColor orangeColor];
 //    textView.placeholder = @"分享一下你的新鲜事...";
     [self.view addSubview:textView];

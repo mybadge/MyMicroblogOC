@@ -18,6 +18,19 @@
 @end
 @implementation MMBEmotionPageView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+       
+
+        //添加长按手势
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressPageView:)];
+        [self addGestureRecognizer:longPress];
+    }
+    return self;
+}
+
 - (void)setEmotions:(NSArray *)emotions{
     _emotions = emotions;
     NSInteger count = emotions.count;
@@ -52,22 +65,35 @@
     self.deleteButton.y = self.height - btnH;
 }
 
-- (void)btnClick:(MMBEmotionButton *)sender{
-    self.popView.emotion = sender.emotion;
+- (void)btnClick:(MMBEmotionButton *)btn{
+    self.popView.emotion = btn.emotion;
     //添加放大镜按钮
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-    CGRect newFrame = [sender convertRect:sender.bounds toView:nil];
-    self.popView.y = CGRectGetMidY(newFrame) - self.popView.height;
-    self.popView.centerX = CGRectGetMidX(newFrame);
+    [self.popView showFrom:btn];
     
-    [window addSubview:self.popView];
+    //UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    //CGRect newFrame = [btn convertRect:btn.bounds toView:nil];
+    //self.popView.y = CGRectGetMidY(newFrame) - self.popView.height;
+    //self.popView.centerX = CGRectGetMidX(newFrame);
+    //
+    //[window addSubview:self.popView];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.popView removeFromSuperview];
     });
+    [self selectedEmotion:btn.emotion];
+}
+
+- (void)selectedEmotion:(MMBEmotion *)emotion{
     //发出通知
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-    userInfo[MMBSelectEmotionKey] = sender.emotion;
-    [MMBNotificationCenter postNotificationName:MMBEmotionDidSelectedNotification object:sender userInfo:userInfo];
+    userInfo[MMBSelectEmotionKey] = emotion;
+    [MMBNotificationCenter postNotificationName:MMBEmotionDidSelectedNotification object:nil userInfo:userInfo];
+}
+
+
+
+- (void)deleteButtonClick{
+    [MMBNotificationCenter postNotificationName:MMBEmotionDidDeletedNotification object:nil];
 }
 
 - (MMBEmotionPopView *)popView{
@@ -77,7 +103,38 @@
     return _popView;
 }
 
+- (void)longPressPageView:(UILongPressGestureRecognizer *)recognizer{
+    CGPoint location = [recognizer locationInView:recognizer.view];
+    MMBEmotionButton *btn = [self emotionButtonWithLocation:location];
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded://手指已经不再触摸pageView了
+            [self.popView removeFromSuperview];
+            if (btn){
+                [self selectedEmotion:btn.emotion];
+            }
+            break;
+            case UIGestureRecognizerStateChanged:
+            
+        default:
+            break;
+    }
+}
+
+- (MMBEmotionButton *)emotionButtonWithLocation:(CGPoint)location{
+    NSUInteger count = self.emotions.count;
+    for (int i = 0 ; i < count; ++i) {
+        MMBEmotionButton *btn = self.subviews[i];
+        if (CGRectContainsPoint(btn.frame, location)) {
+            //已经找到手指所在的表情按钮了,就没有必要在循环下去了
+            return btn;
+        }
+    }
+    return nil;
+}
+
 - (UIButton *)deleteButton{
+    //创建删除按钮
     if (!_deleteButton) {
         UIButton *deleteButton = [[UIButton alloc] init];
         [deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete"] forState:UIControlStateNormal];
@@ -88,11 +145,16 @@
     }
     return _deleteButton;
 }
-
-- (void)deleteButtonClick{
-    //NSLog(@"%s",__func__);
-    [MMBNotificationCenter postNotificationName:MMBEmotionDidDeletedNotification object:nil];
-}
-
-
 @end
+
+
+
+
+
+
+
+
+
+
+
+

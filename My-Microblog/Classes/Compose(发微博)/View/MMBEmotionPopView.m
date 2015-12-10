@@ -28,4 +28,16 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"MMBEmotionPopView" owner:nil options:nil] lastObject];
 }
 
+/**
+ *  添加显示层
+ */
+- (void)showFrom:(UIButton *)btn{
+    //添加放大镜按钮
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    CGRect newFrame = [btn convertRect:btn.bounds toView:nil];
+    self.y = CGRectGetMidY(newFrame) - self.height;
+    self.centerX = CGRectGetMidX(newFrame);
+    [window addSubview:self];
+}
+
 @end
