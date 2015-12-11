@@ -259,7 +259,7 @@
     /**	pic true binary 微博的配图。*/
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [MMBAccountTool account].access_token;
-    params[@"status"] = self.textView.text;
+    params[@"status"] = self.textView.fullText;
     
     [[MMBNetworkTool shareNetworkTool] POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         [SVProgressHUD showSuccessWithStatus:@"发送成功"];
@@ -281,7 +281,7 @@
     /**	pic true binary 微博的配图。*/
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [MMBAccountTool account].access_token;
-    params[@"status"] = self.textView.text;
+    params[@"status"] = self.textView.fullText;
     
     [[MMBNetworkTool shareNetworkTool] POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params  constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         //拼接文件路径

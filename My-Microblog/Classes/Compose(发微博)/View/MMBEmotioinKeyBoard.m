@@ -53,7 +53,6 @@
 }
 
 - (void)didSelectedEmotion{
-    NSLog(@"%s",__func__);
     self.recentListView.emotions = [MMBEmotionTool recentEmotions];
 }
 
