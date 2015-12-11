@@ -170,6 +170,7 @@
  */
 - (void)emotionDidDeleted{
     [self.textView deleteBackward];
+    self.navigationItem.rightBarButtonItem.enabled = self.textView.hasText;
 }
 
 /**
@@ -184,7 +185,7 @@
     //NSLog(@"textView=========%@",self.textView.attributedText);
     NSLog(@"textView.fullText=========%@",self.textView.fullText);
     
-    self.navigationItem.rightBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.enabled = self.textView.hasText;
 }
 
 

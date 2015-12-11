@@ -31,10 +31,9 @@
 
 + (NSAttributedString *)emojiStringWithString:(NSMutableAttributedString *)emojiString //convertBlock:(void (^)(NSString *emoji))convertBlock
 {
-    
-    
     NSRegularExpression *regularEx =
-    [NSRegularExpression regularExpressionWithPattern:@"\\[\\S+\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+    //[NSRegularExpression regularExpressionWithPattern:@"\\[\\S+\\]" options:NSRegularExpressionCaseInsensitive error:nil];
+    [NSRegularExpression regularExpressionWithPattern:@"\\[\\S*?\\]" options:NSRegularExpressionCaseInsensitive error:nil];
     
     NSString *string = emojiString.string;
     
@@ -43,8 +42,11 @@
         NSString *imageName = [string substringWithRange:result.range];
         NSLog(@"%@",imageName);
         EmojiAttachment *attachment = [[EmojiAttachment alloc] initWithData:nil ofType:nil];
-        //attachment.image = [UIImage imageNamed:imageName];
-        attachment.image = [MMBEmotionTool getEmotionWithName:imageName];
+        UIImage *image = [MMBEmotionTool getEmotionWithName:imageName];
+        //如果图片为空 直接返回
+        if (image == nil)  return emojiString;
+        
+        attachment.image = image;
         NSAttributedString *attrString = [NSAttributedString attributedStringWithAttachment:attachment];
         
         [emojiString replaceCharactersInRange:result.range withAttributedString:attrString];
