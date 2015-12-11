@@ -16,6 +16,8 @@
 #import "MMBStatusPhotoView.h"
 #import "MMBStatusPhotosView.h"
 #import "MMBIconView.h"
+#import "NSAttributedString+Emoji.h"
+
 
 @interface MMBStatusCell ()
 /** 原创微博 */
@@ -215,6 +217,10 @@
     
     /** 正文 */
     self.contentLabel.text = status.text;
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:status.text];
+    //完成图文混排
+    self.contentLabel.attributedText = [NSAttributedString emojiStringWithString:attr];
+    
     self.contentLabel.frame = statusFrame.contentLabelF;
     
     
@@ -225,7 +231,13 @@
         self.retweetView.hidden = NO;
         /** 被转发微博整体 */
         self.retweetView.frame = statusFrame.retweetViewF;
-        self.retweetContentLabel.text = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name,retweeted_status.text];
+        NSString *str = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name,retweeted_status.text];
+        NSMutableAttributedString *retweetAttr = [[NSMutableAttributedString alloc] initWithString:str];
+
+        //完成图文混排
+        self.retweetContentLabel.attributedText = [NSAttributedString emojiStringWithString:retweetAttr];
+        
+
         self.retweetContentLabel.frame = statusFrame.retweetContentLabelF;
         
         if (retweeted_status.pic_urls.count) {

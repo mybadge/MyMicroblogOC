@@ -16,4 +16,14 @@
     //附件类
     self.image = [UIImage imageNamed:emotion.png];
 }
+
+
+//I want my emoticon has the same size with line's height
+- (CGRect)attachmentBoundsForTextContainer:(NSTextContainer *)textContainer proposedLineFragment:(CGRect)lineFrag glyphPosition:(CGPoint)position characterIndex:(NSUInteger)charIndex
+{
+    return CGRectMake( 0 , -4, lineFrag.size.height, lineFrag.size.height);
+}
+
+
+
 @end

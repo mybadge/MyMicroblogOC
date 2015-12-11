@@ -41,6 +41,7 @@
 		DA92D3F81C16787000D35E3A /* MMBEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA92D3F71C16787000D35E3A /* MMBEmotionPopView.m */; };
 		DA92D3FA1C16796000D35E3A /* MMBEmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA92D3F91C16796000D35E3A /* MMBEmotionPopView.xib */; };
 		DA94DBAC1C16C8FB00510AEA /* MMBEmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA94DBAB1C16C8FB00510AEA /* MMBEmotionTextView.m */; };
+		DA99323F1C1AAC2100FD69F6 /* NSAttributedString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = DA99323E1C1AAC2100FD69F6 /* NSAttributedString+Emoji.m */; };
 		DAAC890F1C094F5E0000729C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC890E1C094F5E0000729C /* main.m */; };
 		DAAC891A1C094F5E0000729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC89191C094F5E0000729C /* Assets.xcassets */; };
 		DAAC891D1C094F5E0000729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC891B1C094F5E0000729C /* LaunchScreen.storyboard */; };
@@ -149,6 +150,8 @@
 		DA92D3F91C16796000D35E3A /* MMBEmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMBEmotionPopView.xib; sourceTree = "<group>"; };
 		DA94DBAA1C16C8FB00510AEA /* MMBEmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionTextView.h; sourceTree = "<group>"; };
 		DA94DBAB1C16C8FB00510AEA /* MMBEmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionTextView.m; sourceTree = "<group>"; };
+		DA99323D1C1AAC2100FD69F6 /* NSAttributedString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Emoji.h"; sourceTree = "<group>"; };
+		DA99323E1C1AAC2100FD69F6 /* NSAttributedString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Emoji.m"; sourceTree = "<group>"; };
 		DAAC890A1C094F5E0000729C /* My-Microblog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Microblog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC890E1C094F5E0000729C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAAC89191C094F5E0000729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -739,6 +742,8 @@
 		DAEAB4191C0A96DC003295DB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DA99323D1C1AAC2100FD69F6 /* NSAttributedString+Emoji.h */,
+				DA99323E1C1AAC2100FD69F6 /* NSAttributedString+Emoji.m */,
 				DA92D3ED1C15C65D00D35E3A /* NSString+Emoji.h */,
 				DA92D3EE1C15C65D00D35E3A /* NSString+Emoji.m */,
 				DA92D3EF1C15C65D00D35E3A /* NSString+Extension.h */,
@@ -951,6 +956,7 @@
 				DAE09FC11C10174F001B38AF /* MMBStatusPhotoView.m in Sources */,
 				DA600B4F1C0CAB39002D05A1 /* UIWindow+Extension.m in Sources */,
 				DAEAB42E1C0AA133003295DB /* UIView+Extension.m in Sources */,
+				DA99323F1C1AAC2100FD69F6 /* NSAttributedString+Emoji.m in Sources */,
 				DAEAB4281C0A9EC6003295DB /* UIBarButtonItem+Extension.m in Sources */,
 				DA92D3EA1C15B26F00D35E3A /* MMBEmotionPageView.m in Sources */,
 				DA88BC391C17165E0099F1D8 /* UITextView+Extention.m in Sources */,

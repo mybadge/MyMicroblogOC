@@ -13,4 +13,9 @@
 + (void)addRecentEmotion:(MMBEmotion *)emotion;
 
 + (NSArray *)recentEmotions;
+
+/**
+ *  根据显示名称,获取图片对象  例如 [马到成功] -> UIImage
+ */
++ (UIImage *)getEmotionWithName:(NSString *)name;
 @end
