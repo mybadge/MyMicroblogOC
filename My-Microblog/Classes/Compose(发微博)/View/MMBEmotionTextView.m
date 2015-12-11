@@ -51,7 +51,8 @@
     NSMutableString *fullText = [NSMutableString string];
     
     //遍历所有的属性文字 (图片,emoji,文字)
-    [self.attributedText enumerateAttributesInRange:NSMakeRange(0, self.attributedText.length) options:NSAttributedStringEnumerationReverse usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+    //NSAttributedStringEnumerationReverse 是从后往前遍历属性问题,这里用默认的0
+    [self.attributedText enumerateAttributesInRange:NSMakeRange(0, self.attributedText.length) options:0 usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
         //这里有个问题,就是不能根据attach的Image属性拿到image图片原来的图片名称,想了一下,如果这里的NSTextAttachment中有一个我们知道MMBEmotion模型属性就好了,我们就可以根据Emotion属性拿到emotion.chs属性了,想想真是 醉了
         MMBTextAttachment *attach = attrs[@"NSAttachment"];
         if (attach) {//图片
