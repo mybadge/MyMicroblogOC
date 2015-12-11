@@ -33,6 +33,7 @@
         UIPageControl *pageControl = [[UIPageControl alloc] init];
         //关闭pageControld的用户交互
         pageControl.userInteractionEnabled = NO;
+        pageControl.hidesForSinglePage = YES;
         //设置pageControl内部的原点的图片名称
         [pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_normal"] forKey:@"pageImage"];
         [pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_selected"] forKey:@"currentPageImage"];
@@ -44,9 +45,14 @@
 
 - (void)setEmotions:(NSArray *)emotions{
     _emotions = emotions;
-    NSInteger count =(emotions.count + MMBEmotionPageSize -1) / MMBEmotionPageSize;
-    self.pageControl.numberOfPages = count;
     
+    //删除之前的控件
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    NSInteger count =(emotions.count + MMBEmotionPageSize -1) / MMBEmotionPageSize;
+  
+    //设置页数
+    self.pageControl.numberOfPages = count;
     
     //用来创建每页显示的表情控件
     for (int i = 0 ; i < count; ++i) {

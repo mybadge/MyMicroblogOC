@@ -31,7 +31,8 @@
 /**
  *  添加显示层
  */
-- (void)showFrom:(UIButton *)btn{
+- (void)showFrom:(MMBEmotionButton *)btn{
+    self.emotion = btn.emotion;
     //添加放大镜按钮
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     CGRect newFrame = [btn convertRect:btn.bounds toView:nil];

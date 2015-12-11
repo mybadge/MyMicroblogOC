@@ -11,6 +11,7 @@
 #import "MMBEmotionTabBar.h"
 #import "MMBEmotion.h"
 #import "MJExtension.h"
+#import "MMBEmotionTool.h"
 
 
 @interface MMBEmotioinKeyBoard ()<MMBEmotionTabBarDelegate>
@@ -44,8 +45,16 @@
         tabBar.delegate = self;
         [self addSubview:tabBar];
         self.tabBar = tabBar;
+        
+        //表情选中的通知-- 可以做到随时更新最近表情
+        [MMBNotificationCenter addObserver:self selector:@selector(didSelectedEmotion) name:MMBEmotionDidSelectedNotification object:nil];
     }
     return self;
+}
+
+- (void)didSelectedEmotion{
+    NSLog(@"%s",__func__);
+    self.recentListView.emotions = [MMBEmotionTool recentEmotions];
 }
 
 
@@ -66,6 +75,7 @@
     [self.showingListView removeFromSuperview];
     switch (buttonType) {
         case MMBEmotionTabBarButtonTypeRecent:
+            self.recentListView.emotions = [MMBEmotionTool recentEmotions];
             [self addSubview: self.recentListView];
             break;
         case MMBEmotionTabBarButtonTypeDefault:
@@ -90,7 +100,6 @@
 - (MMBEmotionListView *)recentListView{
     if (!_recentListView) {
         _recentListView = [[MMBEmotionListView alloc] init];
-       //这里 waiting ...
     }
     return _recentListView;
 }
@@ -99,7 +108,7 @@
     if (!_defaultListView) {
         _defaultListView = [[MMBEmotionListView alloc] init];
         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/default/info.plist"];
-        self.defaultListView.emotions = array;
+        _defaultListView.emotions = array;
     }
     return _defaultListView;
 }
@@ -107,7 +116,7 @@
 - (MMBEmotionListView *)emojiListView{
     if (!_emojiListView) {
         _emojiListView = [[MMBEmotionListView alloc] init];
-         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/emoji/info.plist"];
+        NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/emoji/info.plist"];
         _emojiListView.emotions = array;
     }
     return _emojiListView;
@@ -118,7 +127,7 @@
         _lxhListView = [[MMBEmotionListView alloc] init];
         NSArray *array = [MMBEmotion mj_objectArrayWithFilename:@"EmotionIcons/lxh/info.plist"];
         _lxhListView.emotions = array;
-     }
+    }
     return _lxhListView;
 }
 

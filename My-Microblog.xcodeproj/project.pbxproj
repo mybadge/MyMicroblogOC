@@ -47,6 +47,7 @@
 		DAAC89281C094F5E0000729C /* My_MicroblogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89271C094F5E0000729C /* My_MicroblogTests.m */; };
 		DAAC89331C094F5E0000729C /* My_MicroblogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89321C094F5E0000729C /* My_MicroblogUITests.m */; };
 		DAAC89871C09701C0000729C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAC89751C09701C0000729C /* AppDelegate.m */; };
+		DABDADAD1C19DAA800243474 /* MMBEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DABDADAC1C19DAA800243474 /* MMBEmotionTool.m */; };
 		DAE09FBE1C0F21C8001B38AF /* MMBStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */; };
 		DAE09FC11C10174F001B38AF /* MMBStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC01C10174F001B38AF /* MMBStatusPhotoView.m */; };
 		DAE09FC41C10251C001B38AF /* MMBStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE09FC31C10251C001B38AF /* MMBStatusPhotosView.m */; };
@@ -161,6 +162,8 @@
 		DAAC89341C094F5E0000729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAAC89741C09701C0000729C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAAC89751C09701C0000729C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DABDADAB1C19DAA800243474 /* MMBEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBEmotionTool.h; sourceTree = "<group>"; };
+		DABDADAC1C19DAA800243474 /* MMBEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBEmotionTool.m; sourceTree = "<group>"; };
 		DAE09FBC1C0F21C8001B38AF /* MMBStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusToolbar.h; sourceTree = "<group>"; };
 		DAE09FBD1C0F21C8001B38AF /* MMBStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBStatusToolbar.m; sourceTree = "<group>"; };
 		DAE09FBF1C10174E001B38AF /* MMBStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBStatusPhotoView.h; sourceTree = "<group>"; };
@@ -667,9 +670,19 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		DABDADAA1C19DA8900243474 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DABDADAB1C19DAA800243474 /* MMBEmotionTool.h */,
+				DABDADAC1C19DAA800243474 /* MMBEmotionTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		DAE09FC81C11B4E1001B38AF /* Compose(发微博) */ = {
 			isa = PBXGroup;
 			children = (
+				DABDADAA1C19DA8900243474 /* Tool */,
 				DAE09FCB1C11B4E1001B38AF /* View */,
 				DAE09FC91C11B4E1001B38AF /* Controller */,
 				DAE09FCA1C11B4E1001B38AF /* Model */,
@@ -980,6 +993,7 @@
 				DAAC890F1C094F5E0000729C /* main.m in Sources */,
 				DAFD42651C140AA10015D7D3 /* MMBEmotioinKeyBoard.m in Sources */,
 				DA3DAE3B1C0C32CC00D31A18 /* MMBOAuthViewController.m in Sources */,
+				DABDADAD1C19DAA800243474 /* MMBEmotionTool.m in Sources */,
 				DA9046B81C0DB9990066A05D /* MMBStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

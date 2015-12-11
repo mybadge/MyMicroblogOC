@@ -11,6 +11,7 @@
 #import "NSString+Emoji.h"
 #import "MMBEmotionButton.h"
 #import "MMBEmotionPopView.h"
+#import "MMBEmotionTool.h"
 
 @interface MMBEmotionPageView ()
 @property (nonatomic, weak) UIButton *deleteButton;
@@ -22,8 +23,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-       
-
+        
+        
         //添加长按手势
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressPageView:)];
         [self addGestureRecognizer:longPress];
@@ -66,7 +67,6 @@
 }
 
 - (void)btnClick:(MMBEmotionButton *)btn{
-    self.popView.emotion = btn.emotion;
     //添加放大镜按钮
     [self.popView showFrom:btn];
     
@@ -84,6 +84,9 @@
 }
 
 - (void)selectedEmotion:(MMBEmotion *)emotion{
+    //将表情插入到沙盒
+    [MMBEmotionTool addRecentEmotion:emotion];
+    
     //发出通知
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
     userInfo[MMBSelectEmotionKey] = emotion;
@@ -114,8 +117,10 @@
                 [self selectedEmotion:btn.emotion];
             }
             break;
-            case UIGestureRecognizerStateChanged:
-            
+        case UIGestureRecognizerStateBegan:
+        case UIGestureRecognizerStateChanged:
+            [self.popView showFrom:btn];
+            break;
         default:
             break;
     }
