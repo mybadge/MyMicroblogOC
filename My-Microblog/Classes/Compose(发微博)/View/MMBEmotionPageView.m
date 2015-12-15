@@ -24,7 +24,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        
         //添加长按手势
         UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressPageView:)];
         [self addGestureRecognizer:longPress];
@@ -57,8 +56,8 @@
         UIButton *btn = self.subviews[i];
         btn.width = btnW;
         btn.height = btnH;
-        btn.x = inset + (i%MMBEmotionMaxCols) * btnW;
-        btn.y = inset + (i/MMBEmotionMaxCols) * btnH;
+        btn.x = inset + (i % MMBEmotionMaxCols) * btnW;
+        btn.y = inset + (i / MMBEmotionMaxCols) * btnH;
     }
     self.deleteButton.width = btnW;
     self.deleteButton.height = btnH;
@@ -126,6 +125,9 @@
     }
 }
 
+/**
+ *  根据一个点击的中心点,获取这个点在那个按钮上,并返回按钮
+ */
 - (MMBEmotionButton *)emotionButtonWithLocation:(CGPoint)location{
     NSUInteger count = self.emotions.count;
     for (int i = 0 ; i < count; ++i) {

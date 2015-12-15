@@ -84,7 +84,6 @@
     
     [btn setBackgroundImage:image forState:UIControlStateNormal];
     [btn setBackgroundImage:selectImage forState:UIControlStateDisabled];
-    
 }
 
 - (void)btnClick:(MMBEmotionTabBarButton *)sender{

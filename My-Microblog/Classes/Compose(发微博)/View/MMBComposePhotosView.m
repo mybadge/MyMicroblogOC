@@ -12,20 +12,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    
-//    /**
-//     NSRegularExpressionCaseInsensitive             = 1 << 0,     /* Match letters in the pattern independent of case. */
-//    NSRegularExpressionAllowCommentsAndWhitespace  = 1 << 1,     /* Ignore whitespace and #-prefixed comments in the pattern. */
-//    NSRegularExpressionIgnoreMetacharacters        = 1 << 2,     /* Treat the entire pattern as a literal string. */
-//    NSRegularExpressionDotMatchesLineSeparators    = 1 << 3,     /* Allow . to match any character, including line separators. */
-//    NSRegularExpressionAnchorsMatchLines           = 1 << 4,     /* Allow ^ and $ to match the start and end of lines. */
-//    NSRegularExpressionUseUnixLineSeparators       = 1 << 5,     /* Treat only \n as a line separator (otherwise, all standard line separators are used). */
-//    //讬唯一 \n 作为行分隔符 (否则为所有标准线使用分隔符)
-//    NSRegularExpressionUseUnicodeWordBoundaries    = 1 << 6      /* Use Unicode TR#29 to specify word boundaries (otherwise, traditional regular expression word boundaries are used). */
-//    //使用 Unicode TR #29 指定单词边界 (否则为传统的正则表达式单词边界使用)。
-//     */
-    
-//    NSRegularExpression *res = [NSRegularExpression regularExpressionWithPattern:@"" options:0 error:nil];
     self = [super initWithFrame:frame];
     if (self) {
         _photos = [NSMutableArray array];

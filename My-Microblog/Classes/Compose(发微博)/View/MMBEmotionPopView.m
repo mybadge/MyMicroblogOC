@@ -16,6 +16,16 @@
 
 @end
 @implementation MMBEmotionPopView
+/*** 添加显示层 */
+- (void)showFrom:(MMBEmotionButton *)btn{
+    self.emotion = btn.emotion;
+    //添加放大镜按钮
+    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    CGRect newFrame = [btn convertRect:btn.bounds toView:nil];
+    self.y = CGRectGetMidY(newFrame) - self.height;
+    self.centerX = CGRectGetMidX(newFrame);
+    [window addSubview:self];
+}
 
 -  (void)setEmotion:(MMBEmotion *)emotion{
     _emotion = emotion;
@@ -28,17 +38,5 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"MMBEmotionPopView" owner:nil options:nil] lastObject];
 }
 
-/**
- *  添加显示层
- */
-- (void)showFrom:(MMBEmotionButton *)btn{
-    self.emotion = btn.emotion;
-    //添加放大镜按钮
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-    CGRect newFrame = [btn convertRect:btn.bounds toView:nil];
-    self.y = CGRectGetMidY(newFrame) - self.height;
-    self.centerX = CGRectGetMidX(newFrame);
-    [window addSubview:self];
-}
 
 @end
